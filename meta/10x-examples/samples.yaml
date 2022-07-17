@@ -1,0 +1,125 @@
+!!python/object/apply:collections.OrderedDict
+- - - hs-1-postvax
+    - infname: /fh/fast/matsen_e/data/10x-examples/processed-data/v1/sc5p_v2_hs_B_postvax_10k_5gex_B_vdj_b_filtered_contig
+      extra-args:
+        partition: &id005
+          - --count-parameters
+        simulate:
+          - --n-sim-events
+          - 8500
+      species: human
+      subject: hs-1
+      locus: None
+  - - hs-1-prevax
+    - infname: /fh/fast/matsen_e/data/10x-examples/processed-data/v1/sc5p_v2_hs_B_prevax_10k_5gex_B_vdj_b_filtered_contig
+      extra-args:
+        partition: *id005
+        simulate:
+          - --n-sim-events
+          - 9200
+      species: human
+      subject: hs-1
+      locus: None
+  - - mm-balbc
+    - infname: /fh/fast/matsen_e/data/10x-examples/processed-data/v1/sc5p_v2_mm_balbc_B_1k_multi_5gex_b_vdj_b_filtered_contig
+      extra-args:
+        partition: *id005
+        simulate:
+          - --n-sim-events
+          - 900
+      species: mouse
+      subject: mm
+      locus: None
+  - - hs-2-pbmc
+    - infname: /fh/fast/matsen_e/data/10x-examples/processed-data/v1/sc5p_v2_hs_PBMC_10k_multi_5gex_5fb_b_t_vdj_b_filtered_contig
+      extra-args:
+        partition: *id005
+        simulate:
+          - --n-sim-events
+          - 1000
+      species: human
+      subject: hs-2
+      locus: None
+  - - mela-tumor
+    - infname: /fh/fast/matsen_e/data/10x-examples/processed-data/v1/sc5p_v1p1_hs_melanoma_10k_b_filtered_contig
+      extra-args:
+        partition: *id005
+      species: human
+      subject: mela-tumor
+      locus: None
+  - - mela-skin
+    - infname: /fh/fast/matsen_e/data/10x-examples/processed-data/v1/7k_melanoma_TBNK_connect_Multiplex_vdj_b_all_contig
+      extra-args:
+        partition: *id005
+      species: human
+      subject: mela-skin
+      locus: None
+  - - cd19-1k
+    - infname: /fh/fast/matsen_e/data/10x-examples/processed-data/v1/sc5p_v2_hs_B_1k_multi_5gex_b_Multiplex_vdj_b_all_contig
+      extra-args:
+        partition: *id005
+      species: human
+      subject: cd19-1k
+      locus: None
+  - - hs-3-pbmc
+    - infname: /fh/fast/matsen_e/data/10x-examples/processed-data/v1/vdj_v1_hs_pbmc3_b_filtered_contig
+      extra-args:
+        partition: *id005
+      species: human
+      subject: hs-3-pbmc
+      locus: None
+  - - hs-nsclc
+    - infname: /fh/fast/matsen_e/data/10x-examples/processed-data/v1/vdj_v1_hs_nsclc_multi_5gex_t_b_vdj_b_filtered_contig
+      extra-args:
+        partition: *id005
+      species: human
+      subject: hs-nsclc
+      locus: None
+  - - mm-balbc-2
+    - infname: /fh/fast/matsen_e/data/10x-examples/processed-data/v1/vdj_v1_mm_balbc_pbmc_b_filtered_contig
+      extra-args:
+        partition: *id005
+      species: mouse
+      subject: mm-balbc-2
+      locus: None
+  - - mm-c57bl6
+    - infname: /fh/fast/matsen_e/data/10x-examples/processed-data/v1/vdj_v1_mm_c57bl6_pbmc_b_filtered_contig
+      extra-args:
+        partition: *id005
+      species: mouse
+      subject: mm-c57bl6
+      locus: None
+  - - hs-2b-pbmc
+    - infname: /fh/fast/matsen_e/data/10x-examples/processed-data/v1/vdj_v1_hs_pbmc2_b_filtered_contig
+      extra-args:
+        partition: *id005
+        simulate:
+          - --n-sim-events
+          - 1000
+      species: human
+      subject: hs-2b-pbmc
+      locus: None
+  - - hs-1-postvax-simu-v0
+    - infname: /fh/fast/matsen_e/processed-data/partis/10x-examples/v1/hs-1-postvax/simulate-v0
+      species: human
+      subject: hs-1
+      locus: None
+      simu: True
+  - - hs-1-prevax-simu-v0
+    - infname: /fh/fast/matsen_e/processed-data/partis/10x-examples/v1/hs-1-prevax/simulate-v0
+      species: human
+      subject: hs-1
+      locus: None
+      simu: True
+  - - mm-balbc-simu-v0
+    - infname: /fh/fast/matsen_e/processed-data/partis/10x-examples/v1/mm-balbc/simulate-test
+      species: mouse
+      subject: mm
+      locus: None
+      simu: True
+  - - hs-2-pbmc-simu-v0
+    - infname: /fh/fast/matsen_e/processed-data/partis/10x-examples/v1/hs-2-pbmc/simulate-v0
+      species: human
+      subject: hs-2
+      locus: None
+      simu: True
