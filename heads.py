@@ -1,3 +1,4 @@
+from __future__ import absolute_import, division, unicode_literals, print_function
 import glob
 import copy
 import os
@@ -10,6 +11,7 @@ import random
 import traceback
 import numpy
 import itertools
+from io import open
 
 metadir = os.path.dirname(os.path.realpath(__file__)) + '/meta'
 try:
@@ -119,16 +121,16 @@ def get_qti_fname(study, mfo):
     return '%s/%s/_tmp/%s-%s-queries-to-include.yaml' % (metadir, study, mfo['subject'], mfo['locus'])
 
 # ----------------------------------------------------------------------------------------
-def write_yaml_metafo(study, metafo, seedfos=None, mfname=None):  # e.g. if you have meta/seed csvs, and you want to switch to yamls for this study UPDATE i think this comment is out of date?
+def write_yaml_metafo(study, metafo, rootdir, seedfos=None, mfname=None):  # e.g. if you have meta/seed csvs, and you want to switch to yamls for this study UPDATE i think this comment is out of date?
     if study in studies:  # convert the lambda functions to their return value
         for sample, mfo in metafo.items():
             for key in mfo.keys():
                 if key.split('-')[-1] == 'fcn':
-                    mfo['-'.join(key.split('-')[:-1])] = mfo[key](get_datadir(study, 'raw'), sample)
+                    mfo['-'.join(key.split('-')[:-1])] = mfo[key](get_datadir(study, 'raw', rootdir), sample)
                     del mfo[key]
     if mfname is None:
         mfname = getmetafname(study, force_yaml=True)
-    print '  writing yaml sample info to %s' % mfname
+    print('  writing yaml sample info to %s' % mfname)
     if not os.path.exists(os.path.dirname(mfname)):
         os.makedirs(os.path.dirname(mfname))
     with open(mfname, 'w') as yfile:
@@ -138,8 +140,8 @@ def write_yaml_metafo(study, metafo, seedfos=None, mfname=None):  # e.g. if you 
         yamlfo = seedfos
         for subject in yamlfo:
             for locus in yamlfo[subject]:
-                yamlfo[subject][locus] = yamlfo[subject][locus].values()  # avoid writing an ordered dict, so the file's more human readable
-        print '  writing yaml seed info to %s' % getseedfname(study, yaml=True)
+                yamlfo[subject][locus] = list(yamlfo[subject][locus].values())  # avoid writing an ordered dict, so the file's more human readable
+        print('  writing yaml seed info to %s' % getseedfname(study, yaml=True))
         with open(getseedfname(study, yaml=True), 'w') as yfile:
             yaml.dump(yamlfo, yfile, default_flow_style=False)
 
@@ -181,10 +183,10 @@ def subset_seed_info(seedfos, subject, locus, seed_uids=None, seed_origin=None):
         subfos = seedfos[subject][locus]
 
     if seed_uids is not None:
-        uids_before = subfos.keys()
+        uids_before = list(subfos.keys())
         subfos = collections.OrderedDict([(uid, sfo) for uid, sfo in subfos.items() if uid in seed_uids])
         if len(subfos) == 0:
-            print '\n  %s no seedfos passing restriction %s (started with %s)' % (utils.color('yellow', 'warning'), seed_uids, uids_before)
+            raise Exception('no seedfos passing restriction for subject %s locus %s: %s\n(started with %s)' % (subject, locus, ' '.join(seed_uids), ' '.join(uids_before)))
     if seed_origin is not None:
         subfos = collections.OrderedDict([(uid, sfo) for uid, sfo in subfos.items() if sfo['origin'] == seed_origin])
     return subfos
@@ -200,7 +202,7 @@ def read_seed_info(study, debug=False):
             return seedfos
 
     if debug:
-        print '\n  reading seeds from %s' % ' '.join(seedfnames)
+        print('\n  reading seeds from %s' % ' '.join(seedfnames))
     for fname in seedfnames:   # shitty loop name, but I don't want to break backwards compatibility by changing the arg name
         if os.path.splitext(fname)[1] == '.csv':
             subject, locus = os.path.basename(fname).split('.')[0].split('-')
@@ -218,51 +220,75 @@ def read_seed_info(study, debug=False):
         elif os.path.splitext(fname)[1] == '.yaml':
             with open(fname) as seedfile:
                 seedfos = yaml.load(seedfile, Loader=yaml.Loader)
+            if 'subjects' in seedfos:  # alternative/new way: in addition to having blocks for each subject, you can list the subjects at the top along with a 'common:' block with seed ids that should go with all subjects
+                newfos = {}
+                for subj in seedfos['subjects']:
+                    newfos[subj] = copy.deepcopy(seedfos['common'])
+                    if subj in seedfos:
+                        for locus in seedfos[subj]:
+                            newfos[subj][locus] += seedfos[subj][locus]
+                seedfos = newfos
             for subject in seedfos:
                 for locus in seedfos[subject]:
+                    for sfo in seedfos[subject][locus]:
+                        sfo['locus'] = locus
                     seedfos[subject][locus] = collections.OrderedDict([(sfo['uid'], sfo) for sfo in seedfos[subject][locus]])
         else:
             assert False
 
     if debug:
         for subject in seedfos:
-            print subject
+            print(subject)
             for locus in seedfos[subject]:
-                print '  %s' % locus
+                print('  %s' % locus)
                 max_len = max([len(s) for s in seedfos[subject][locus]])
                 for uid in seedfos[subject][locus]:
-                    print ('   %' + str(max_len) + 's  %s') % (uid, seedfos[subject][locus][uid]['seq'])
+                    print(('   %' + str(max_len) + 's  %s') % (uid, seedfos[subject][locus][uid]['seq']))
 
     return seedfos
 
 # ----------------------------------------------------------------------------------------
 def collect_paired_seeds(seedfos):
-    spairs = []
-
-    n_before = len(seedfos)
-    seedfos = [s for s in seedfos.values() if s['uid'].count('-')>0 and s['uid'].split('-')[-1] in utils.loci]
-    if len(seedfos) < n_before:
-        print '\n    %s removed %d/%d seedfos with uids that we couldn\'t parse for locus (should be e.g. name-stuff-igh)' % (utils.color('yellow', 'warning'), n_before - len(seedfos), n_before)
+    # ----------------------------------------------------------------------------------------
+    def is_ok(s):
+        if 'paired-uid' in s:
+            return True
+        if s['uid'].count('-')>0 and s['uid'].split('-')[-1] in utils.loci:
+            return True
+        return False
+    # ----------------------------------------------------------------------------------------
     def keyfunc(x):
         xl = x['uid'].split('-')
         if xl[-1] in utils.loci:  # if it has the locus at the end, remove it
             xl = xl[:-1]
         return '-'.join(xl)
-    for ustr, sfos in itertools.groupby(sorted(seedfos, key=keyfunc), key=keyfunc):
+    # ----------------------------------------------------------------------------------------
+    def addpair(pfos):
+        spairs.append(':'.join(s['uid'] for s in pfos))
+        lpairs.append(':'.join(s['locus'] for s in pfos))
+    # ----------------------------------------------------------------------------------------
+    spairs, lpairs = [], []
+    sfo_list = [s for s in seedfos.values() if is_ok(s)]
+    if len(sfo_list) < len(seedfos):
+        print('\n    %s removed %d/%d seedfos with uids that we couldn\'t parse for locus (should either have a name like name-stuff-igh, or have explicite \'paired-uid\' key)' % (utils.color('yellow', 'warning'), len(seedfos) - len(seedfos), len(seedfos)))
+    for sfo in [s for s in sfo_list if 'paired-uid' in s and utils.has_d_gene(s['locus'])]:  # put heavy chain first
+        addpair([sfo, utils.get_single_entry([s for s in sfo_list if s['uid']==sfo['paired-uid']])])
+    sfo_list = [s for s in sfo_list if 'paired-uid' not in s]
+    for ustr, sfos in itertools.groupby(sorted(sfo_list, key=keyfunc), key=keyfunc):
         sfos = list(sfos)
         if len(sfos) > 2:
-            print '    too many seeds for %s: %s' % (ustr, ' '.join(s['uid'] for s in sfos))
+            print('    too many seeds for %s: %s' % (ustr, ' '.join(s['uid'] for s in sfos)))
         elif len(sfos) <= 1:
-            print '    not enough seeds for %s: %s' % (ustr, ' '.join(s['uid'] for s in sfos))
-        if '-igh' in sfos[1]['uid']:
+            raise Exception('not enough seeds for %s: %s' % (ustr, ' '.join(s['uid'] for s in sfos)))
+        if sfos[1]['locus'] == 'igh':
             sfos.reverse()
-        spairs.append(':'.join(s['uid'] for s in sfos))
+        addpair(sfos)
 
-    return spairs
+    return spairs, lpairs
 
 # ----------------------------------------------------------------------------------------
 def add_seed_pairing_info(seedfos, outfos):
-    spairs = collect_paired_seeds(seedfos)
+    spairs, _ = collect_paired_seeds(seedfos)
     for sfo in outfos:
         spair = utils.get_single_entry([j for j in spairs if sfo['name'] in j.split(':')])
         pid = utils.get_single_entry([u for u in spair.split(':') if u != sfo['name']])
@@ -310,16 +336,9 @@ studies = {  # DEPRECATED all this info now goes in the study's meta.yaml instea
         'aa-translation-fname-fcn' : lambda datadir, sample: datadir + '/processed_data/' + sample + '/04_igblast_out/' + sample + '.igblast.prod.scrub.clon.fasta',  # NOTE this is now also the input file
         'extra-args' : laura_extra_args,
     },
-    'rubelt-heritable-influence' : {
-        'infname-fcn' : lambda datadir, sample: datadir + '/sequence_data/bcell/' + sample + '.fasta',
-    },
     'jason-influenza' : {
         'infname-fcn' : lambda datadir, sample: datadir + '/processed/patients/' + sample + '.csv',
         'extra-args' : {'all' : ['--seq-column', 'SEQUENCE_INPUT', '--timepoint-column', 'TIME_POINT']},  # both this and jason-mg use some nucleotide string as SEQUENCE_INPUT that isn't always unique, so I'm just letting partis use the line number
-    },
-    'cui-et-al' : {
-        'infname-fcn' : lambda datadir, sample: datadir + '/processed/' + sample + '.tsv',
-        'extra-args' : {'all' : ['--name-column', 'SEQUENCE_ID', '--seq-column', 'SEQUENCE_INPUT']},
     },
     'jason-mg' : {
         'infname-fcn' : lambda datadir, sample: datadir + '/processed/patients/' + sample + '.csv',
@@ -330,11 +349,6 @@ studies = {  # DEPRECATED all this info now goes in the study's meta.yaml instea
     },
     'chaim-vrc01-i-think' : {
         'infname-fcn' : lambda datadir, sample: datadir + '/' + sample + '.fa',
-    },
-    'adaptive-billion-read' : {
-        'infname-fcn' : lambda datadir, sample: datadir + '/' + sample + '/shuffled.csv',
-        'find-new-alleles' : False,  # not enough V to make it worthwhile
-        'extra-args' : {'all' : ['--name-column', 'unique_id', '--seq-column', 'seq']},
     },
     'vollmers' : {
         'infname-fcn' : lambda datadir, sample: datadir + '/' + sample + '/' + sample + '_Lineages.fasta',
@@ -358,14 +372,17 @@ studies = {  # DEPRECATED all this info now goes in the study's meta.yaml instea
 # ----------------------------------------------------------------------------------------
 def get_infname(study, sample, mfo):
     if study in studies:
-        return mfo['infname-fcn'](get_datadir(study, 'raw'), sample)  # studies[study]['infname-fcn'](get_datadir(study, 'raw'), sample)
+        raise Exception('update this study to work with new samples.yaml type meta info (i.e. do *not* use <samples> dict)')
+        inpath = mfo['infname-fcn'](get_datadir(study, 'raw', rootdir), sample)  # studies[study]['infname-fcn'](get_datadir(study, 'raw'), sample)
     else:
-        return mfo['infname']
+        inpath = mfo['infname']
+    if inpath[0] != '/':
+        inpath = os.path.realpath(inpath)
+    return inpath
 
 # ----------------------------------------------------------------------------------------
-def get_datadir(study, dtype, extra_str=None):
-    rootdir = '/fh/fast/matsen_e'
-
+# should probably be called outdir instead of datadir at this point, but I don't want to change it
+def get_datadir(study, dtype, rootdir, extra_str=None):
     if dtype == 'raw':
         return_str = rootdir + '/data/' + study
     elif dtype == 'processed':
@@ -379,8 +396,8 @@ def get_datadir(study, dtype, extra_str=None):
     return return_str
 
 # ----------------------------------------------------------------------------------------
-def get_parameter_dir(study, sample, extra_str=None):
-    return get_datadir(study, 'processed', extra_str=extra_str) + '/' + sample
+def get_parameter_dir(study, sample, base_outdir, extra_str=None):
+    return get_datadir(study, 'processed', base_outdir, extra_str=extra_str) + '/' + sample
 
 # ----------------------------------------------------------------------------------------
 def full_sample(metafos, shorthand):  # <shorthand> can also be full sample
@@ -394,56 +411,6 @@ def full_sample(metafos, shorthand):  # <shorthand> can also be full sample
 # ----------------------------------------------------------------------------------------
 def full_dataset(metafos, shorthand):  # backwards compatibility
     return full_sample(metafos, shorthand)
-
-# ----------------------------------------------------------------------------------------
-def output_exists(args, outpath, read_existing_output):  # [originally] copied from partis/python/compareutils.py NOTE shit, there's also one of these in python/utils.py
-    # designed such that if this fcn returns True, the calling function should return immediately
-
-    def delete_output(fn):
-        if os.path.isdir(fn):
-            raise Exception('warning: output %s is a directory, comment this by hand a few times to make sure it\'s working properly' % fn)
-            check_call(['rm', '-r', fn])
-        else:
-            os.remove(fn)
-
-    if not os.path.exists(outpath):
-        return False
-
-    if args.overwrite:
-        print '                      overwriting %s' % outpath
-        delete_output(outpath)
-        return False
-    if args.rm:
-        print '                      removing %s' % outpath
-        delete_output(outpath)
-        return True  # NOTE args.overwrite returns False -- args.rm is for deleting without immediately re-running
-
-    # handle zero empty dirs/zero length files (by default we leave 'em be)
-    if os.path.isdir(outpath):
-        if len(os.listdir(outpath)) == 0:
-            if args.rm_zero_length:
-                print '                      removing empty dir %s' % outpath
-                os.rmdir(outpath)
-                return False
-            else:
-                print '                      leaving empty dir %s (set --rm-zero-length to delete)' % outpath
-                return True
-    else:
-        if os.stat(outpath).st_size == 0:
-            if args.rm_zero_length:
-                print '                      deleting zero length %s' % outpath
-                os.remove(outpath)
-                return False
-            else:
-                print '                      leaving zero length %s (set --rm-zero-length to delete)' % outpath
-                return True
-
-    if read_existing_output:
-        print '                      output exists, proceeding to read: %s' % outpath
-        return False  # because it's not the output now, it's the input, see...
-
-    print '                      output exists, skipping (%s)' % outpath
-    return True
 
 # ----------------------------------------------------------------------------------------
 def annotate_to_get_light_chain_locus(l_uid, l_seq, debug=False):  # holy shit I would really rather not do it this way (but laura's on vacation, and it should be ok)
@@ -467,19 +434,19 @@ def annotate_to_get_light_chain_locus(l_uid, l_seq, debug=False):  # holy shit I
     #     return mfreq
 
     if debug:
-        print '    %s: getting mfreq for igk/igl' % l_uid
+        print('    %s: getting mfreq for igk/igl' % l_uid)
     mfreqs = {}
     for locus in ['igk', 'igl']:
         mfreqs[locus] = get_locus_mfreq_with_vsearch(locus)
         if debug:
-            print '        %s  %.3f' % (locus, mfreqs[locus])
-    sorted_locis, sorted_mfreqs = zip(*sorted(mfreqs.items(), key=operator.itemgetter(1)))
+            print('        %s  %.3f' % (locus, mfreqs[locus]))
+    sorted_locis, sorted_mfreqs = list(zip(*sorted(list(mfreqs.items()), key=operator.itemgetter(1))))
     if sorted_mfreqs[1] / sorted_mfreqs[0] < 2.5:
         raise Exception('not enough separation between mfreqs for igk/igl')
     if sorted_mfreqs[0] < 0. or sorted_mfreqs[0] > 0.4:
         raise Exception('weird minimum mfreq %f' % sorted_mfreqs[0])
     if debug:
-        print '    return: %s' % sorted_locis[0]
+        print('    return: %s' % sorted_locis[0])
     return sorted_locis[0]
 
 # ----------------------------------------------------------------------------------------
@@ -517,8 +484,8 @@ def get_uids_and_loci(seedfos, subject, line, dbg_str):
         except:
             exc_type, exc_value, exc_traceback = sys.exc_info()
             lines = traceback.format_exception(exc_type, exc_value, exc_traceback)
-            print utils.pad_lines(''.join(lines))
-            print '   %s failed to guess for \'%s\'' % (utils.color('red', 'error'), line['ab_name'])
+            print(utils.pad_lines(''.join(lines)))
+            print('   %s failed to guess for \'%s\'' % (utils.color('red', 'error'), line['ab_name']))
             return None, None, None, None, None, None, dbg_str
     else:  # otherwise see if it's in the existing seed info
         for locus in seedfos[subject]:
@@ -559,7 +526,7 @@ def parse_laura_neut_csv(study, seedfos):  # adds neutralization info from laura
         if uid in seedfos[subject][locus]:
             if seq != seedfos[subject][locus][uid]['seq']:
                 a, b = utils.color_mutants(seq, seedfos[subject][locus][uid]['seq'], align=True, return_ref=True)
-                print '            %s different sequences for %s\n            %s\n            %s' % (utils.color('red', 'warning'), uid, a, b)
+                print('            %s different sequences for %s\n            %s\n            %s' % (utils.color('red', 'warning'), uid, a, b))
             dbg_str += ' %s in seedfos' % utils.color('green', 'already')
         else:
             seedfos[subject][locus][uid] = {'uid' : uid, 'seq' : seq}
@@ -580,9 +547,9 @@ def parse_laura_neut_csv(study, seedfos):  # adds neutralization info from laura
 
     tmp_subject_list = ['bf520', 'mg505', 'bg505']
     neut_csv_fnames = glob.glob(metadir + '/laura-neut-database*.csv')  # arg, not the best way to combine them
-    print '  reading neut info from %d files: %s    (%s locus means we ran annotation to figure out the light chain locus)' % (len(neut_csv_fnames), ' '.join(neut_csv_fnames), utils.color('green', 'green'))
+    print('  reading neut info from %d files: %s    (%s locus means we ran annotation to figure out the light chain locus)' % (len(neut_csv_fnames), ' '.join(neut_csv_fnames), utils.color('green', 'green')))
     for ncfn in neut_csv_fnames:
-        print 'starting file %d: %s' % (neut_csv_fnames.index(ncfn), ncfn)
+        print('starting file %d: %s' % (neut_csv_fnames.index(ncfn), ncfn))
         with open(ncfn) as nfile:
             reader = csv.DictReader(nfile)
             last_subject = None
@@ -620,7 +587,7 @@ def parse_laura_neut_csv(study, seedfos):  # adds neutralization info from laura
                 if l_uid is not None and l_seq != '':
                     dbg_str = add_info(subject, l_locus, l_uid, l_seq, line, neutfo, dbg_str)
 
-                print dbg_str
+                print(dbg_str)
 
 # # ----------------------------------------------------------------------------------------
 # # transfers neut info in seed file to affinity info in input meta file (this is old: the better/current way is to just write an input meta file initially and use that, but I'm keeping this for backwards compatibility with e.g. pc64, wu-focused, and some of laura's data)
@@ -671,13 +638,13 @@ def write_cluster_summary_tables(outfname, seedfos, args, n_max_clusters=500):  
     # ----------------------------------------------------------------------------------------
     def write_file(summary_fname, clusterfos):
         if len(clusterfos) == 0:
-            print '  nothing to write to %s' % summary_fname
+            print('  nothing to write to %s' % summary_fname)
             return
-        print '  writing to %s' % summary_fname
+        print('  writing to %s' % summary_fname)
         with open(summary_fname, 'w') as sfile:
-            writer = csv.DictWriter(sfile, clusterfos.values()[0][0].keys())  # NOTE this uses the last <outfo> from the loop above
+            writer = csv.DictWriter(sfile, list(list(clusterfos.values())[0][0].keys()))  # NOTE this uses the last <outfo> from the loop above
             writer.writeheader()
-            for clusterstr, outfos in sorted(clusterfos.items(), key=lambda x: x[0].count(':'), reverse=True):
+            for clusterstr, outfos in sorted(list(clusterfos.items()), key=lambda x: x[0].count(':'), reverse=True):
                 for iseed, outfo in enumerate(outfos):
                     if len(outfos) > 1 and 'clonal-seeds' in outfo:
                         outfo['clonal-seeds'] = [ofo['uid'] for ofo in outfos]
@@ -722,7 +689,7 @@ def write_cluster_summary_tables(outfname, seedfos, args, n_max_clusters=500):  
             clusters = [c for c in cpath.partitions[cpath.i_best] if sfo['uid'] in c]
             if len(clusters) == 0:
                 if sfo['uid'] in outfname and not (args.paired_loci and '+'+sfo['uid'] in outfname):  # hackey way to see if we expect this seed to be in this file (if --paired is set, we only read the igh output file, so expect to have all the light chain uids missing)
-                    print 'couldn\'t find %s in %s' % (sfo['uid'], outfname)
+                    print('couldn\'t find %s in %s' % (sfo['uid'], outfname))
                 continue
             elif len(clusters) > 1:
                 raise Exception('found %d clusters (rather than 1) for \'%s\'' % (len(clusters), sfo['uid']))  # I think this shouldn't happen, even for seed partitioning, if we're looking at the best partition
@@ -736,20 +703,20 @@ def write_cluster_summary_tables(outfname, seedfos, args, n_max_clusters=500):  
         for cluster in size_sorted_clusters:
             add_to_info(clusterfos, cluster)
             if len(clusterfos) >= n_max_clusters:
-                print '    stopping with %d (of %d) clusters (skipped: %s)' % (len(clusterfos), len(size_sorted_clusters), utils.cluster_size_str(size_sorted_clusters))
+                print('    stopping with %d (of %d) clusters (skipped: %s)' % (len(clusterfos), len(size_sorted_clusters), utils.cluster_size_str(size_sorted_clusters)))
                 break
 
         write_file(utils.replace_suffix(outfname, '-partition-summary.csv'), clusterfos)
     # ----------------------------------------------------------------------------------------
     glfo, annotation_list, cpath = utils.read_output(outfname)
     if len(annotation_list) == 0 or len(cpath.partitions) == 0:
-        print '    empty partitions or annotation list in %s' % outfname
+        print('    empty partitions or annotation list in %s' % outfname)
         return
     annotations = utils.get_annotation_dict(annotation_list)
     size_sorted_clusters = sorted(cpath.partitions[cpath.i_best], key=len, reverse=True)
     sorted_cluster_sizes = [len(c) for c in size_sorted_clusters]
     repertoire_size = sum(len(c) for c in cpath.partitions[cpath.i_best])
-    shm_sorted_clusters, _ = zip(*sorted([(c, numpy.mean(annotations[':'.join(c)]['mut_freqs'])) for c in cpath.partitions[cpath.i_best] if ':'.join(c) in annotations], key=operator.itemgetter(1), reverse=True))  # not really sure why they're sometimes missing, but I think it's just the occasional failed annotation
+    shm_sorted_clusters, _ = list(zip(*sorted([(c, numpy.mean(annotations[':'.join(c)]['mut_freqs'])) for c in cpath.partitions[cpath.i_best] if ':'.join(c) in annotations], key=operator.itemgetter(1), reverse=True)))  # not really sure why they're sometimes missing, but I think it's just the occasional failed annotation
 
     write_seed_cluster_info()
     write_partition_info()
@@ -774,8 +741,8 @@ def get_subst_data(args, locus, region='v', debug=False):
                 #     sys.exit()
                 subst_info[gene] = []
                 if debug:
-                    print '    %s' % utils.color_gene(gene)
-                    print '       ipos  germlines   freq     %s' % '  '.join(('%'+str(twd)+'s')%aa for aa in all_aas)
+                    print('    %s' % utils.color_gene(gene))
+                    print('       ipos  germlines   freq     %s' % '  '.join(('%'+str(twd)+'s')%aa for aa in all_aas))
             else:
                 assert last_gene == gene  # make sure a gene isn't in there twice
 
@@ -796,7 +763,7 @@ def get_subst_data(args, locus, region='v', debug=False):
             total = sum(newfo['aa_freqs'].values())
             if total > 0:
                 if not utils.is_normed(total, this_eps=0.05):  # some of them are off by quite a bit (i saw 1.02), presumably from rounding
-                    print '  %s total not normed: %.6f      %s' % (utils.color('red', 'warning'), total, newfo['aa_freqs'].values())
+                    print('  %s total not normed: %.6f      %s' % (utils.color('red', 'warning'), total, list(newfo['aa_freqs'].values())))
 
             sfos.append(newfo)
 
@@ -806,7 +773,7 @@ def get_subst_data(args, locus, region='v', debug=False):
                          return utils.color('blue', '0', width=twd, padside='right') if newfo['aa_freqs'][aa]==0. else (('%'+str(twd)+'.2f') % newfo['aa_freqs'][aa])
                      else:
                          return utils.color('red', '-', width=twd, padside='right')
-                print '      %3d     %-6s     %.2f       %s' % (newfo['ipos'], ' '.join(newfo['germlines']), newfo['mut_freq'], '  '.join(fstr(a) for a in all_aas))
+                print('      %3d     %-6s     %.2f       %s' % (newfo['ipos'], ' '.join(newfo['germlines']), newfo['mut_freq'], '  '.join(fstr(a) for a in all_aas)))
 
             last_gene = gene
 
@@ -817,7 +784,7 @@ def get_subst_data(args, locus, region='v', debug=False):
 def write_subst_prob_table(outfname, parameter_dir, locus, seedfos, args, debug=False):
     glfo, annotation_list, cpath = utils.read_output(outfname, glfo_dir=parameter_dir + '/hmm/germline-sets', locus=locus)
     if len(annotation_list) == 0 or len(cpath.partitions) == 0:
-        print '    empty partitions or annotation list in %s' % outfname
+        print('    empty partitions or annotation list in %s' % outfname)
         return
     annotations = {':'.join(adict['unique_ids']) : adict for adict in annotation_list}  # collect the annotations in a dictionary so they're easier to access
 
@@ -832,7 +799,7 @@ def write_subst_prob_table(outfname, parameter_dir, locus, seedfos, args, debug=
         clusters = [c for c in cpath.partitions[cpath.i_best] if sfo['uid'] in c]
         if len(clusters) == 0:
             if sfo['uid'] in outfname:  # hackey way to see if we expect this seed to be in this file
-                print 'couldn\'t find %s in %s' % (sfo['uid'], outfname)
+                print('couldn\'t find %s in %s' % (sfo['uid'], outfname))
             continue
         elif len(clusters) > 1:
             raise Exception('found %d clusters (rather than 1) for \'%s\'' % (len(clusters), sfo['uid']))  # I think this shouldn't happen, even for seed partitioning, if we're looking at the best partition
@@ -856,25 +823,25 @@ def write_subst_prob_table(outfname, parameter_dir, locus, seedfos, args, debug=
         for tuid in [sfo['uid']] + [s['name'] for s in extra_seqfos]:
             seq_aa = utils.per_seq_val(line, 'seqs_aa', tuid)[aa_start : aa_stop]
             if debug:
-                print '      %s' % utils.color('blue', tuid)
+                print('      %s' % utils.color('blue', tuid))
                 utils.color_mutants(naive_seq_aa, seq_aa, print_result=True, amino_acid=True, extra_str='           ')
 
             sfogenes = [g for g in subst_info if utils.are_alleles(line['v_gene'], g)]
             if len(sfogenes) != 1:
-                raise Exception('couldn\'t find exactly one gene to match %s from among %s' % (utils.color_gene(line['v_gene']), utils.color_genes(subst_info.keys())))
+                raise Exception('couldn\'t find exactly one gene to match %s from among %s' % (utils.color_gene(line['v_gene']), utils.color_genes(list(subst_info.keys()))))
             if debug:
-                print '         using info from %s for gene from annotation %s' % (utils.color_gene(sfogenes[0]), utils.color_gene(line['v_gene']))
+                print('         using info from %s for gene from annotation %s' % (utils.color_gene(sfogenes[0]), utils.color_gene(line['v_gene'])))
             sinfos = subst_info[sfogenes[0]]
             outfo = {'name' : tuid, 'naive_seq_aa' : [], 'mature_seq_aa' : [],
                      'overall_freq' : [],  # fraction of observed sequences in which this position had a non-synonymous mutation (so might make more sense to normalize to 1, since as-is they're scaled to the shm rate of whatever repertoire they were calculated on)
                      'per_base_freq' : []  # given that it's mutated (i.e. the previous line), propensity for each position to mutate to the aa that we observed in the mature sequence
             }
             if debug:
-                print '           ipos  ipos+1  naive  mature  overall  per-base'
+                print('           ipos  ipos+1  naive  mature  overall  per-base')
             for sfo in sinfos:
                 naive_aa = naive_seq_aa[sfo['ipos']]
                 if naive_aa not in sfo['germlines']:
-                    print '    %s germline from annotation %s at %d not among germlines in subst_info %s' % (utils.color('red', 'warning'), naive_aa, sfo['ipos'], sfo['germlines'])
+                    print('    %s germline from annotation %s at %d not among germlines in subst_info %s' % (utils.color('red', 'warning'), naive_aa, sfo['ipos'], sfo['germlines']))
                 mature_aa = seq_aa[sfo['ipos']]
                 outfo['naive_seq_aa'].append(naive_aa)
                 outfo['mature_seq_aa'].append(mature_aa)
@@ -884,14 +851,14 @@ def write_subst_prob_table(outfname, parameter_dir, locus, seedfos, args, debug=
                 else:
                     outfo['per_base_freq'].append(sfo['aa_freqs'][mature_aa])
                     if debug:
-                        print '           %3d %3d     %s --> %s        %.2f     %.2f' % (sfo['ipos'], sfo['ipos']+1, naive_aa, mature_aa if mature_aa!=naive_aa else '', sfo['mut_freq'], sfo['aa_freqs'][mature_aa])
+                        print('           %3d %3d     %s --> %s        %.2f     %.2f' % (sfo['ipos'], sfo['ipos']+1, naive_aa, mature_aa if mature_aa!=naive_aa else '', sfo['mut_freq'], sfo['aa_freqs'][mature_aa]))
             output_infos.append(outfo)
 
         if len(output_infos) == 0:
-            print '  nothing to write to %s' % output_infos
+            print('  nothing to write to %s' % output_infos)
             continue
         sprob_fname = utils.replace_suffix(outfname, '-subst-probs.csv')
-        print '  writing to %s' % sprob_fname
+        print('  writing to %s' % sprob_fname)
         with open(sprob_fname, 'w') as outfile:
             for ifo, outfo in enumerate(output_infos):
                 if ifo == 0:

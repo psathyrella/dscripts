@@ -1,0 +1,38 @@
+!!python/object/apply:collections.OrderedDict
+- - - paired-sample-1
+    - infname: test/paired/ref-results/test/simu  # full path to input dir
+      extra-args:
+        all:  # any extra partis args that you want applied to all actions go here
+          - --airr-output
+        partition:  # and any extra args for a specific action go like this
+          - --extra-annotation-columns
+          - cdr3_seqs:seqs_aa
+        simulate:
+          - --n-sim-events
+          - 10
+      locus: null #None #igh
+      species: human
+      subject: subj-1
+# # uncomment this (and edit it) after running simulation if you want to run partis on the resulting simulation files
+# - - paired-sample-1-simu-v0
+#   - infname: /path/to/simu/output
+#     species: human
+#     subject: subj-1
+#     locus: None
+#     simu: True
+  - - paired-sample-slow
+    - infname: test/paired/ref-results-slow/test/simu
+      locus: null #None #igh
+      species: human
+      subject: subj-1
+# uncomment these (and comment above) for bulk data
+# - - single-sample-1
+#   - infname: test/ref-results/test/simu.yaml
+#     locus: igh
+#     species: human
+#     subject: subj-1
+# - - single-sample-slow
+#   - infname: test/ref-results-slow/test/simu.yaml
+#     locus: igh
+#     species: human
+#     subject: subj-1

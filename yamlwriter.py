@@ -1,8 +1,10 @@
+from __future__ import absolute_import, division, unicode_literals, print_function
 import sys
 import copy
 import os
 import yaml
 import subprocess
+from io import open
 
 import heads
 import preprocess
@@ -12,10 +14,10 @@ class YamlWriter(object):
     def __init__(self, args, yamldir):
         self.yamlpath = yamldir + '/info.yaml'
         if args.overwrite or not os.path.exists(self.yamlpath):
-            print '  init yaml at %s' % self.yamlpath
+            print('  init yaml at %s' % self.yamlpath)
             self.init_file(args)  # loops over all samples
         else:
-            print '  read existing yaml at %s' % self.yamlpath
+            print('  read existing yaml at %s' % self.yamlpath)
             self.read_file()
 
     # ----------------------------------------------------------------------------------------
@@ -47,7 +49,7 @@ class YamlWriter(object):
                 'seeds' : {seedstr : {} for seedstr in heads.subset_seed_info(args.seedfos, mfo['subject'], mfo['locus'])},  # file looks nicer if we convert from OrderedDict
             } for sample, mfo in args.metafo.items()}
 
-        print '  initializing %s' % self.yamlpath
+        print('  initializing %s' % self.yamlpath)
         self.write_yaml()
 
     # ----------------------------------------------------------------------------------------
@@ -62,7 +64,7 @@ class YamlWriter(object):
 
     # ----------------------------------------------------------------------------------------
     def edit(self, args, outpath, sample, seedstr=None, extra_logstr=None):
-        print ''
+        print('')
 
         if args.action == 'cache-parameters':
             assert outpath.endswith('/hmm/hmms')
@@ -102,9 +104,9 @@ class YamlWriter(object):
                 if name in subdict:
                     if subdict[name] != val:
                         raise Exception('subdict[%s] existing val doesn\'t match new val:\n   %s\n   %s' % (name, subdict[name], val))
-                    print '    already in yaml'
+                    print('    already in yaml')
                 else:
-                    print '    adding %s' % val
+                    print('    adding %s' % val)
                     subdict[name] = val
                     modified = True
             else:
@@ -119,7 +121,7 @@ class YamlWriter(object):
         if os.path.exists(outpath):
             modified = self.addval(self.yamlfo['samples'][sample], keylist, val)
             if modified:
-                print '      rewriting yaml'
+                print('      rewriting yaml')
                 self.write_yaml()
         else:
-            print '     missing output %s' % outpath
+            print('     missing output %s' % outpath)

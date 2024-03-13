@@ -1,3 +1,4 @@
+from __future__ import absolute_import, division, unicode_literals, print_function
 import glob
 import random
 import copy
@@ -8,9 +9,10 @@ import os
 import sys
 import collections
 import json
+from io import open
 
 partis_dir = os.getcwd()  # os.path.dirname(os.path.realpath(__file__)).replace('/bin', '')
-sys.path.insert(1, partis_dir + '/python')
+sys.path.insert(1, partis_dir)
 import heads
 import utils
 
@@ -54,10 +56,11 @@ def get_per_seq_metafo_fname(seqfname):
 # ----------------------------------------------------------------------------------------
 def get_vlad_paths(study):
     glob_str = heads.vlad_path_glob_strs[study]
+    raise Exception('get_datadir() signature needs updating')
     vpaths = sorted(glob.glob(heads.get_datadir(study, 'raw') + '/' + glob_str))
     vnames = [os.path.basename(vpath).split('.')[0] for vpath in vpaths]
-    print '  found %d vlad paths for %s' % (len(vpaths), study)
-    return zip(vnames, vpaths)
+    print('  found %d vlad paths for %s' % (len(vpaths), study))
+    return list(zip(vnames, vpaths))
 
 # ----------------------------------------------------------------------------------------
 def get_multiplicity(study, seqfo):
@@ -83,9 +86,9 @@ def get_multiplicity(study, seqfo):
 # ----------------------------------------------------------------------------------------
 def write_per_seq_metafo(per_seq_metafo, seqfname):
     if set(per_seq_metafo[0].keys()) != set(per_seq_metafo_keys):
-        raise Exception('unexpected per seq meta info keys: %s' % per_seq_metafo[0].keys())
+        raise Exception('unexpected per seq meta info keys: %s' % list(per_seq_metafo[0].keys()))
     mfname = get_per_seq_metafo_fname(seqfname)
-    print '    writing per-seq metafo to %s' % mfname
+    print('    writing per-seq metafo to %s' % mfname)
     with open(mfname, 'w') as outfile:
         outfo = {mfo['unique_id'] : {k : v for k, v in mfo.items() if k!='unique_id'} for mfo in per_seq_metafo}  # this will break if i want more metafo keys, but oh well
         json.dump(outfo, outfile)
@@ -103,7 +106,7 @@ def get_sample_merge_info(metafo, study, subject, args, dont_merge_timepoints=Fa
     for tkey in ['isotype', 'locus']:  # merge by isotype if they all have it, otherwise locus (which i think is required)
         if all(tkey in mfo for mfo in metafo.values()):
             creg_key = tkey
-            print '    using \'%s\' to merge samples (chose from isotype/locus)' % creg_key
+            print('    using \'%s\' to merge samples (chose from isotype/locus)' % creg_key)
             break
     merge_info = {}  # map from <keystr> (string uniquely identifying the group of samples we'll merge together) : those samples
     for sample, mfo in metafo.items():
@@ -176,7 +179,7 @@ def merge_samples(args, study, subject, add_seed_seqs=False):
                 subval = sub_mfo[key] if key != 'timepoint' else get_standardized_timepoint(sub_mfo[key])
                 if merged_mfo[key] != subval:
                     if key in heads.mandatory_metafo:
-                        print '  %s mandatory meta value for \'%s\' differs among subsamples: %s %s' % (utils.color('red', 'warning'), key, merged_mfo[key], subval)
+                        print('  %s mandatory meta value for \'%s\' differs among subsamples: %s %s' % (utils.color('red', 'warning'), key, merged_mfo[key], subval))
                     if key == 'extra-args':
                         for subkey in set(merged_mfo[key]) | set(sub_mfo[key]):
                             merged_mfo[key][subkey] = utils.merge_arg_lists(merged_mfo[key].get(subkey, []), sub_mfo[key].get(subkey, []))
@@ -187,7 +190,7 @@ def merge_samples(args, study, subject, add_seed_seqs=False):
     merge_info = get_sample_merge_info(args.metafo, study, subject, args, dont_merge_timepoints=args.dont_merge_timepoints)
     if args.test:
         tmpdir = '/tmp/merge-timepoint-test/subd'
-        print 'writing test to %s' % tmpdir
+        print('writing test to %s' % tmpdir)
         if os.path.exists(tmpdir):
             for fn in glob.glob(tmpdir + '/*.fasta'):
                 os.remove(fn)
@@ -196,7 +199,7 @@ def merge_samples(args, study, subject, add_seed_seqs=False):
 
     for merged_name, samples in merge_info.items():
         if len(samples) < 2 and args.dont_merge_single_samples:
-            print '    too few samples (%d) for %s' % (len(samples), merged_name)
+            print('    too few samples (%d) for %s' % (len(samples), merged_name))
             continue
         outfname = None
         infnames, outfo = [], []
@@ -222,11 +225,11 @@ def merge_samples(args, study, subject, add_seed_seqs=False):
             if outfname is None:
                 mergedir = os.path.abspath(os.path.dirname(fname) + '/' + os.path.pardir) + '/merged'
                 outfname = mergedir + '/' + merged_name + os.path.splitext(fname)[1]
-                print '  %s: merging %d sample%s' % (merged_name, len(samples), utils.plural(len(samples)))
+                print('  %s: merging %d sample%s' % (merged_name, len(samples), utils.plural(len(samples))))
                 if os.path.exists(outfname):  # ok, this is a weird place to put this, but it works ok
                     if not os.path.exists(get_per_seq_metafo_fname(outfname)):
                         raise Exception('processed file %s exists but per-seq metafo file %s does not (probably should delete entire directory and start over)' % (outfname, get_per_seq_metafo_fname(outfname)))
-                    print '  %s merged output file already exists, exiting: %s' % (utils.color('yellow', 'warning'), outfname)
+                    print('  %s merged output file already exists, exiting: %s' % (utils.color('yellow', 'warning'), outfname))
                     return
             merged_sample_mfo = update_merged_mfo(merged_name, merged_sample_mfo, mfo, outfname)
             if add_seed_seqs:
@@ -273,7 +276,7 @@ def merge_samples(args, study, subject, add_seed_seqs=False):
         if outfname is None:
             continue
 
-        print '  merged extra-args: %s' % merged_sample_mfo['extra-args']
+        print('  merged extra-args: %s' % merged_sample_mfo['extra-args'])
         args.metafo[merged_name] = merged_sample_mfo
 
         utils.mkdir(outfname, isfile=True)
@@ -285,16 +288,16 @@ def merge_samples(args, study, subject, add_seed_seqs=False):
             for seqfo in outfo:  # then write everybody else
                 outfile.write('>%s\n%s\n' % (seqfo['name'], seqfo['seq']))
         write_per_seq_metafo(per_seq_metafo, outfname)
-        print '    input file seqs%s%s:' % ('' if args.n_max_queries is None else ', --n-max-queries %d'%args.n_max_queries, '' if args.n_random_queries is None else ', --n-random-queries %d'%args.n_random_queries)
+        print('    input file seqs%s%s:' % ('' if args.n_max_queries is None else ', --n-max-queries %d'%args.n_max_queries, '' if args.n_random_queries is None else ', --n-random-queries %d'%args.n_random_queries))
         for ifn, count in sorted(input_lengths.items()):  #, key=opertator.itemgetter(1), reverse=True
-            print '     %4d %s' % (count, ifn)
-        print '     %4d total' % sum(input_lengths.values())
+            print('     %4d %s' % (count, ifn))
+        print('     %4d total' % sum(input_lengths.values()))
 
-        print '    output:'
+        print('    output:')
         out, _ = utils.simplerun('grep \'>\' %s | wc -l' % outfname, shell=True, return_out_err=True, debug=False)
-        print '     %4d %s' % (int(out), outfname)
+        print('     %4d %s' % (int(out), outfname))
 
-    heads.write_yaml_metafo(args.study, args.metafo, mfname=('%s/meta.yaml'%tmpdir) if args.test else None)
+    heads.write_yaml_metafo(args.study, args.metafo, args.base_outdir, mfname=('%s/meta.yaml'%tmpdir) if args.test else None)
 
 # ----------------------------------------------------------------------------------------
 def translate_sample_name(study, vname, vpath, add_seed_seqs=False):
@@ -410,6 +413,7 @@ def translate_sample_name(study, vname, vpath, add_seed_seqs=False):
     # NOTE for qa255-synth we don't make it down here in the first/outer call, but do in the nested call
 
     mfo['vlad-fname'] = vpath
+    raise Exception('get_datadir() signature needs updating')
     mfo['infname'] = '%s/vlad-processed-data%s/%s.fasta' % (heads.get_datadir(study, 'raw'), '-with-seed-seqs' if add_seed_seqs else '', mfo['sample'])
     mfo['extra-args'] = {'all' : heads.laura_base_args, 'seed-partition' : heads.laura_seed_args}
 
@@ -433,7 +437,7 @@ def process_vlad_data(args, add_seed_seqs=False):  # if <add_seed_seqs> is set, 
                 metafos.update(sub_metafos)  # meta info corresponding to that sub study, but modified to be a part of the synth study
         else:
             metafos = make_vlad_meta(args, args.study, add_seed_seqs=add_seed_seqs)
-        heads.write_yaml_metafo(args.study, metafos)
+        heads.write_yaml_metafo(args.study, metafos, args.base_outdir)
     else:
         write_processed_vlad_files(args, args.study, add_seed_seqs=add_seed_seqs)
 
@@ -457,14 +461,14 @@ def write_processed_vlad_files(args, study, add_seed_seqs=False):  # NOTE do _no
     first_time_through = True
     for sample, mfo in metafos.items():
         if first_time_through:
-            print '  using vlad paths like: %s' % mfo['vlad-fname']
+            print('  using vlad paths like: %s' % mfo['vlad-fname'])
             first_time_through = False
         if args.subjects is not None and mfo['subject'] not in args.subjects:
             continue
         if mfo['timepoint'] == 'merged':
             continue
         outfname = mfo['infname']
-        print '  %-20s  %20s       %s' % (mfo.get('sub-study', ''), mfo['sample'], outfname)
+        print('  %-20s  %20s       %s' % (mfo.get('sub-study', ''), mfo['sample'], outfname))
         if args.dry_run:
             continue
         if not os.path.exists(os.path.dirname(outfname)):
@@ -472,21 +476,21 @@ def write_processed_vlad_files(args, study, add_seed_seqs=False):  # NOTE do _no
         if os.path.exists(outfname):
             if not os.path.exists(get_per_seq_metafo_fname(outfname)):
                 raise Exception('processed file exists but per-seq metafo file does not (probably should delete entire directory and start over)')
-            print '  processed vlad files already exist %s, returning' % outfname
+            print('  processed vlad files already exist %s, returning' % outfname)
             return
 
         with open(outfname, 'w') as outfile:
             per_seq_metafo = []
 
             seedfo = heads.subset_seed_info(seedfos, mfo['subject'], mfo['locus'])
-            print '     read %d seeds' % len(seedfo)
+            print('     read %d seeds' % len(seedfo))
             sys.stdout.flush()
             for sfo in seedfo.values():
                 if add_seed_seqs:
                     outfile.write('>%s\n%s\n' % (sfo['uid'], sfo['seq']))
                 per_seq_metafo.append({'unique_id' : sfo['uid'], 'timepoint' : None, 'multiplicity' : 1})
 
-            print '     writing fasta lines'
+            print('     writing fasta lines')
             sys.stdout.flush()
             remove_chimeras = '.igblast.' in mfo['vlad-fname']  # if we're using vlad's igblast'd output, we want to remove sequences that he's marked as chimeric NOTE chimera removal also happens in get_per_seq_metafo()  UPDATE: wtf? I don't see this fcn, I guess it doesn't exist any more
             n_chimeras = 0
@@ -500,7 +504,7 @@ def write_processed_vlad_files(args, study, add_seed_seqs=False):  # NOTE do _no
                 outfile.write('>%s\n%s\n' % (seqfo['name'], seqfo['seq']))
 
         if remove_chimeras:
-            print '    removed %d chimeras' % n_chimeras
+            print('    removed %d chimeras' % n_chimeras)
 
         write_per_seq_metafo(per_seq_metafo, outfname)
 
