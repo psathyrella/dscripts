@@ -7,13 +7,13 @@ To install, clone this repo into the partis main dir, and run from there (it may
 
 General syntax is:
 
-```./datascripts/run.py <action> --study <study> [--paired] --version <version> --base-outdir /path/to/output```
+```./dscripts/run.py <action> --study <study> [--paired] --version <version> --base-outdir /path/to/output```
 
-This runs the specified partis action using the yaml configuration file in `datascripts/meta/<study>/samples.yaml`.
-So to run on your own data, copy the files in `datascripts/meta/test` to `datascripts/meta/<your study name>` and modify them.
-For instance to run on some test files specified in [`datascripts/meta/test/samples.yaml`](https://github.com/psathyrella/datascripts/blob/main/meta/test/samples.yaml):
+This runs the specified partis action using the yaml configuration file in `dscripts/meta/<study>/samples.yaml`.
+So to run on your own data, copy the files in `dscripts/meta/test` to `dscripts/meta/<your study name>` and modify them.
+For instance to run on some test files specified in [`dscripts/meta/test/samples.yaml`](https://github.com/psathyrella/dscripts/blob/main/meta/test/samples.yaml):
 
-```./datascripts/run.py cache-parameters --study test --paired --version test-v0 --samples paired-sample-1 --base-outdir /path/to/output --dry-run --print-width 0```
+```./dscripts/run.py cache-parameters --study test --paired --version test-v0 --samples paired-sample-1 --base-outdir /path/to/output --dry-run --print-width 0```
 
 Well actually with the `--dry-run` it just prints the partis commands it wouuld run; if you're sure the commands look correct, remove `--dry-run` to actually run.
 Be careful not to run this same command again, which would start a new set of jobs doing the same things as your first ones.
@@ -24,10 +24,10 @@ If you set `--start-n-max-and-exit`, it'll instead exit after starting the first
 The number of procs for each partis job is set with `--n-procs`.
 To write debug output, add `--view-ascii`.
 
-For reproducibility (and to reduce typing) you don't actually want to type these out each time; instead keep track of them in a shell script like [`datascripts/meta/test/run.sh`](https://github.com/psathyrella/datascripts/blob/main/meta/test/run.sh).
+For reproducibility (and to reduce typing) you don't actually want to type these out each time; instead keep track of them in a shell script like [`dscripts/meta/test/run.sh`](https://github.com/psathyrella/dscripts/blob/main/meta/test/run.sh).
 
 After `cache-parameters` has finished, you typically want to run partitioning, for which you'd just run the same command but with `cache-parameters` replaced with `partition`.
-If you have some seed sequences (see partis manual), you can use `seed-partition` to run that action (seed sequences are specified with a `seeds.yaml` file, see example in `datascripts/meta/test/seeds.yaml`).
+If you have some seed sequences (see partis manual), you can use `seed-partition` to run that action (seed sequences are specified with a `seeds.yaml` file, see example in `dscripts/meta/test/seeds.yaml`).
 The `simulate` action will run partis simulation mimicking the data sample, using the parameters made by `cache-parameters`.
 After running simulation, you can run other partis commands on the resulting sample by adding the dir/file as a new sample to samples.yaml with your chosen name.
 
