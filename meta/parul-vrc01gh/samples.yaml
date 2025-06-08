@@ -1,0 +1,60 @@
+!!python/object/apply:collections.OrderedDict
+- - - d1
+    - infname: /fh/fast/matsen_e/data/parul-vrc01gh/processed/v2/split-loci
+      extra-args: &001
+        all:
+          - --partition-plot-cfg
+          - trees:mut-bubble:subtree-purity:vrc01-muts
+          - --tree-inference-method
+          - iqtree
+          - --existing-output-run-cfg
+          - single
+          - --input-metafnames
+          - /fh/fast/matsen_e/data/parul-vrc01gh/processed/v2/meta.yaml:datascripts/meta/parul-vrc01gh/meta-chosen.yaml
+          # - --collapse-duplicate-sequences
+        cache-parameters:
+          - --initial-germline-dir
+          - datascripts/meta/parul-vrc01gh/germlines
+          - --leave-default-germline
+          - --sanitize-input-germlines
+        view-output:
+          - --extra-print-keys=paired-uids:timepoints
+        partition:
+          - --n-final-clusters 1
+        merge-paired-partitions:
+          - --n-final-clusters 1
+        plot-partitions:
+          - --meta-info-key-to-color
+          - timepoints
+          - --meta-info-to-emphasize
+          - chosens,True
+          # - --mutation-label-cfg all #:mut-strs
+          - --n-final-clusters 1
+        get-selection-metrics:
+          - --meta-info-to-emphasize
+          - chosens,True
+        simulate:
+          - --n-sim-events
+          - 1
+          - --n-leaves
+      locus: None
+      species: human
+      subject: d1
+  - - d1-mutd
+    - infname: /fh/fast/matsen_e/data/parul-vrc01gh/pseudo/v0/mutated
+      extra-args: *001
+      locus: None
+      species: human
+      subject: d1
+  # - - d1-shuf
+  #   - infname: /fh/fast/matsen_e/data/parul-vrc01gh/pseudo/v0/shuffled
+  #     extra-args: *001
+  #     locus: None
+  #     species: human
+  #     subject: d1
+  - - d1-mutd-shuf
+    - infname: /fh/fast/matsen_e/data/parul-vrc01gh/pseudo/v0/mutd-shufd
+      extra-args: *001
+      locus: None
+      species: human
+      subject: d1

@@ -15,7 +15,7 @@ For instance to run on some test files specified in [`dscripts/meta/test/samples
 
 ```./dscripts/run.py cache-parameters --study test --paired --version test-v0 --samples paired-sample-1 --base-outdir /path/to/output --dry-run --print-width 0```
 
-Well actually with the `--dry-run` it just prints the partis commands it wouuld run; if you're sure the commands look correct, remove `--dry-run` to actually run.
+Well actually with the `--dry-run` it just prints the partis commands it would run; if you're sure the commands look correct, remove `--dry-run` to actually run.
 Be careful not to run this same command again, which would start a new set of jobs doing the same things as your first ones.
 Once they're running, you can check status by adding `--check` (which prints the tail of the log files) or `--logfnames` (which prints the name of the log files, e.g. for piping to `|xargs less -LS`).
 If you have lots of samples, you probably want to run only a few partis jobs at once, specified with `--n-max-jobs`.
