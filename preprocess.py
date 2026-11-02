@@ -11,10 +11,8 @@ import collections
 import json
 from io import open
 
-partis_dir = os.getcwd()  # os.path.dirname(os.path.realpath(__file__)).replace('/bin', '')
-sys.path.insert(1, partis_dir)
 import heads
-import utils
+import partis.utils as utils
 
 # ----------------------------------------------------------------------------------------
 per_seq_metafo_keys = ['unique_id', 'timepoint', 'multiplicity']

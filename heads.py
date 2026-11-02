@@ -14,13 +14,9 @@ import itertools
 from io import open
 
 metadir = os.path.dirname(os.path.realpath(__file__)) + '/meta'
-try:
-    sys.path.insert(1, './python')
-    import utils
-    import glutils
-    import indelutils
-except:
-    pass
+import partis.utils as utils
+import partis.glutils as glutils
+import partis.indelutils as indelutils
 
 isotypes = ['m', 'g', 'k', 'l']  # non-exhaustive
 loci = {'igh' : 'vdj',  # damnit, this is already in utils, but I can't figure out a good way to import that
@@ -218,8 +214,9 @@ def read_seed_info(study, debug=False):
                     if 'origin' in line:
                         seedfos[subject][locus][suid]['origin'] = line['origin']
         elif os.path.splitext(fname)[1] == '.yaml':
-            with open(fname) as seedfile:
-                seedfos = yaml.load(seedfile, Loader=yaml.Loader)
+            seedfos = utils.read_json_yaml(fname)
+            # with open(fname) as seedfile:
+            #     seedfos = yaml.load(seedfile, Loader=yaml.Loader)
             if 'subjects' in seedfos:  # alternative/new way: in addition to having blocks for each subject, you can list the subjects at the top along with a 'common:' block with seed ids that should go with all subjects
                 newfos = {}
                 for subj in seedfos['subjects']:
@@ -248,7 +245,8 @@ def read_seed_info(study, debug=False):
     return seedfos
 
 # ----------------------------------------------------------------------------------------
-def collect_paired_seeds(seedfos):
+# group together h/l pairs of seed info dicts
+def collect_paired_seeds(seedfos, debug=False):
     # ----------------------------------------------------------------------------------------
     def is_ok(s):
         if 'paired-uid' in s:
@@ -270,32 +268,52 @@ def collect_paired_seeds(seedfos):
     spairs, lpairs = [], []
     sfo_list = [s for s in seedfos.values() if is_ok(s)]
     if len(sfo_list) < len(seedfos):
-        print('\n    %s removed %d/%d seedfos with uids that we couldn\'t parse for locus (should either have a name like name-stuff-igh, or have explicite \'paired-uid\' key)' % (utils.color('yellow', 'warning'), len(seedfos) - len(seedfos), len(seedfos)))
-    for sfo in [s for s in sfo_list if 'paired-uid' in s and utils.has_d_gene(s['locus'])]:  # put heavy chain first
-        addpair([sfo, utils.get_single_entry([s for s in sfo_list if s['uid']==sfo['paired-uid']])])
+        print('\n    %s removed %d/%d seedfos with uids that we couldn\'t parse for locus (should either have a name like name-stuff-igh, or have explicit \'paired-uid\' key)' % (utils.color('yellow', 'warning'), len(seedfos) - len(seedfos), len(seedfos)))
+    # first add the ones with a 'paired-uid' key
+    sfo_dict = {s['uid'] : s for s in sfo_list}
+    for sfo in [s for s in sfo_list if 'paired-uid' in s and utils.has_d_gene(s['locus'])]:  # loop over just heavy chain (which puts heavy chain first in the pair)
+        addpair([sfo, sfo_dict[sfo['paired-uid']]])
+    # then do the ones that don't have explicit 'paired-uid' key (which we try to group by droplet id)
     sfo_list = [s for s in sfo_list if 'paired-uid' not in s]
+    n_badly_paired, n_tot = 0, len(spairs)  # include the ones we've already done in n_tot
     for ustr, sfos in itertools.groupby(sorted(sfo_list, key=keyfunc), key=keyfunc):
         sfos = list(sfos)
-        if len(sfos) > 2:
-            print('    too many seeds for %s: %s' % (ustr, ' '.join(s['uid'] for s in sfos)))
-        elif len(sfos) <= 1:
-            raise Exception('not enough seeds for %s: %s' % (ustr, ' '.join(s['uid'] for s in sfos)))
+        n_tot += 1
+        if len(sfos) != 2:
+            n_badly_paired += 1
+            continue
         if sfos[1]['locus'] == 'igh':
             sfos.reverse()
         addpair(sfos)
+    if debug and n_badly_paired > 0:
+        print('    %d / %d seedfo groups had length different from 2 (i.e. were badly paired)' % (n_badly_paired, n_tot))
 
-    return spairs, lpairs
+    return spairs, lpairs  # list of colon-separated uids, list of colon-separated loci
 
 # ----------------------------------------------------------------------------------------
 def add_seed_pairing_info(seedfos, outfos):
     spairs, _ = collect_paired_seeds(seedfos)
+    spdict = {u : s.split(':') for s in spairs for u in s.split(':')}
+    n_skipped, n_tot = 0, 0
     for sfo in outfos:
-        spair = utils.get_single_entry([j for j in spairs if sfo['name'] in j.split(':')])
-        pid = utils.get_single_entry([u for u in spair.split(':') if u != sfo['name']])
+        n_tot += 1
+        if sfo['name'] not in spdict or len(spdict[sfo['name']]) != 2:  # only want to add pair info for correctly-paired seqs
+            n_skipped += 1
+            continue
+        pid = utils.get_single_entry([u for u in spdict[sfo['name']] if u != sfo['name']])
         sfo['paired-uids'] = [pid]
-        sfo['locus'] = sfo['name'].split('-')[-1]
+        if 'paired-uid' in sfo:
+            del sfo['paired-uid']  # i think i can remove this? not super sure though
+        tmploc = sfo['name'].split('-')[-1]  # see if we can get locus from seq name
+        if 'locus' in sfo:
+            if tmploc in utils.loci:  # if we can, check if it matches any existing info
+                assert tmploc == sfo['locus']
+        else:
+            sfo['locus'] = tmploc
         if sfo['locus'] not in utils.loci:
             raise Exception('couldn\'t parse locus from %s (got %s)' % (sfo['name'], sfo['locus']))
+    if n_skipped > 0:
+        print('    added pair info for %d / %d seedfos (skipped %d)' % (n_tot - n_skipped, n_tot, n_skipped))
 
 # ----------------------------------------------------------------------------------------
 laura_base_args = ['--skip-unproductive']
