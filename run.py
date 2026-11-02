@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 from __future__ import absolute_import, division, unicode_literals, print_function
 import math
 import numpy
@@ -36,11 +36,12 @@ formatter_class = MultiplyInheritedFormatter
 parser = argparse.ArgumentParser(formatter_class=MultiplyInheritedFormatter, usage=usage_msg)
 partis_actions = {  # correspondence between run.py actions and partis actions (default: same)
     'seed-partition' : 'partition',
+    # 'subset-partition' : 'partition',
 }
 
 def pact(act):
     return partis_actions.get(act, act)
-all_actions = ['cache-parameters', 'partition', 'seed-partition', 'check-seeds-in-input-files', 'process-vlad-data', 'merge-samples', 'convert-csv-meta-to-yaml', 'simulate']  # NOTE args like --write-seed-summary-table and --get-naive-probabilities below are kind of like actions
+all_actions = ['cache-parameters', 'partition', 'subset-partition', 'seed-partition', 'check-seeds-in-input-files', 'process-vlad-data', 'merge-samples', 'convert-csv-meta-to-yaml', 'simulate']  # NOTE args like --write-seed-summary-table and --get-naive-probabilities below are kind of like actions
 all_actions += ['alternate-seed-naive-seqs']  # DEPRECATED
 parser.add_argument('action', choices=all_actions)
 
@@ -147,11 +148,11 @@ if args.start_n_max_and_exit and args.n_max_jobs is None:
 if not os.path.exists(args.partis_dir):
     print('WARNING current script dir %s doesn\'t exist, so python path may not be correctly set' % args.partis_dir)
 sys.path.insert(1, args.partis_dir)
-import python.utils as utils
-import python.seqfileopener as seqfileopener
-from python.clusterpath import ClusterPath
-import python.processargs as processargs
-import python.paircluster as paircluster
+import partis.utils as utils
+import partis.seqfileopener as seqfileopener
+from partis.clusterpath import ClusterPath
+import partis.processargs as processargs
+import partis.paircluster as paircluster
 
 import heads
 from yamlwriter import YamlWriter
@@ -189,10 +190,10 @@ args.subjects = utils.get_arg_list(args.subjects)
 if args.subjects is not None and not args.write_meta:
     args.samples = [s for s in args.samples if args.metafo[s]['subject'] in args.subjects]
 
-args.loci = utils.get_arg_list(args.loci)
+args.loci = utils.get_arg_list(args.loci, translation={'None' : None})
 if args.loci is not None:
-    if len(set(args.loci) - set(utils.loci)) > 0:
-        raise Exception('unexpected --loci \'%s\'' % ' '.join(set(args.loci) - set(utils.loci)))
+    if len(set(args.loci) - set(utils.loci) - set([None, 'None'])) > 0:
+        raise Exception('unexpected --loci \'%s\'' % ' '.join(set(args.loci) - set(utils.loci) - set([None, 'None'])))
     args.samples = [s for s in args.samples if args.metafo[s]['locus'] in args.loci]
 
 args.isotypes = utils.get_arg_list(args.isotypes)
@@ -218,6 +219,7 @@ if args.print_width == 0:
 
 baseoutdir = heads.get_datadir(args.study, 'processed', args.base_outdir, extra_str=args.version)
 if args.write_yaml:
+    assert not args.paired_loci  # would need to implement this
     if args.version == 'latest':
         raise Exception('--version must be explicitly specified in order to write yamls (look in %s)' % baseoutdir.replace('/latest', ''))
     args.yamlwriter = YamlWriter(args, baseoutdir)
@@ -238,7 +240,7 @@ if args.ex_out_version != '':
         raise Exception('need to set either --get-selection-metrics, --infer-trees, or --plot-partitions when --ex-out-version is set')
 
 if args.paired_loci:
-    assert args.action in ['cache-parameters', 'partition', 'seed-partition', 'simulate']  # others still need to be checked/implemented
+    assert args.action in ['cache-parameters', 'partition', 'subset-partition', 'seed-partition', 'simulate']  # others still need to be checked/implemented
     assert not args.get_naive_probabilities
     # assert not args.view_alternative_annotations
 
@@ -305,12 +307,12 @@ def check_seeds_in_files(mfo, sample):
 def read_logs(logfname):  # NOTE this duplicates code in utils.process_out_err()/utils.finish_process()
     print('    log/err tails:')
     if os.path.exists(logfname):
-        print('        %s tail (%s)' % (utils.color('green', 'log'), check_output(['ls', '-l', logfname]).strip()))
-        print(pad_lines(check_output(['tail', '-n5', logfname])))
+        print('        %s tail (%s)' % (utils.color('green', 'log'), check_output(['ls', '-l', logfname], universal_newlines=True).strip()))
+        print(pad_lines(check_output(['tail', '-n5', logfname], universal_newlines=True)))
     errfname = logfname.replace('.log', '.err')
     if os.path.exists(errfname) and os.stat(errfname).st_size > 0:
         print('        %s tail (%s)' % (utils.color('red', 'err'), errfname))
-        print(pad_lines(check_output(['tail', '-n5', errfname])))
+        print(pad_lines(check_output(['tail', '-n5', errfname], universal_newlines=True)))
     if not os.path.exists(logfname) and not os.path.exists(errfname):
         print('')
 
@@ -520,8 +522,6 @@ def write_queries_to_include_fname(cmdstr, args, mfo):  # this is super hackey, 
         return
     outfos = []
     for sfo in subfos.values():
-        if sfo['seq'] is None:
-            continue
         tmpfo = {k : v for k, v in sfo.items() if k != 'uid'}
         tmpfo['name'] = sfo['uid']  # this sucks, but the datascripts seed file uses 'uid', whereas all the partis seqfo stuff uses 'name'
         outfos.append(tmpfo)
@@ -656,14 +656,14 @@ def get_outpath(parameter_dir, mfo, logfname):
         if acstr == 'cache-parameters':
             outpath = lambda l: '%s/parameters/%s/hmm/hmms' % (parameter_dir, l)
         else:
-            outpath = lambda l: paircluster.paired_fn(os.path.dirname(logfname), l, suffix='.yaml', actstr='partition' if acstr=='partition' else None)
+            outpath = lambda l: paircluster.paired_fn(os.path.dirname(logfname), l, suffix='.yaml', actstr='partition' if acstr in ['partition', 'subset-partition'] else None)
     else:
         if acstr == 'cache-parameters':
             if args.other_method is None:
                 outpath = '%s/hmm/hmms' % parameter_dir
             else:
                 outpath = other_method_outfname(parameter_dir, args.other_method, mfo)
-        elif acstr == 'partition':
+        elif acstr in ['partition', 'subset-partition']:
             outpath = utils.getprefix(logfname) + get_output_suffix(utils.getprefix(logfname))
             if args.other_method is not None:
                 outpath = outpath.replace('/partitions/', '/%s/'%args.other_method)
@@ -677,7 +677,7 @@ def run_sample(sample, extra_logstr=None, seed_increment=0):
     mfo = args.metafo[sample]
     infname = heads.get_infname(args.study, sample, mfo)
     if not args.paired_loci and mfo['locus'] in [None, 'None']:  # put 'null' in the yaml to get actual None here (but old files i was putting 'None', which it doesn't convert)
-        raise Exception('for paired data have to set \'locus\' to None in sample as well as --paired-loci')
+        raise Exception('--paired-loci not set but locus is None')
     if mfo['locus'] not in [None, 'None'] and args.paired_loci:
         raise Exception('if --paired-loci is set, locus must be None')
 
@@ -687,7 +687,7 @@ def run_sample(sample, extra_logstr=None, seed_increment=0):
 
     if not args.logfnames:
         print('%s %s %s   %s' % (utils.color('blue', mfo['subject'], width=5, padside='right'),
-                                 utils.color('purple', mfo['timepoint'], width=7, padside='right'),
+                                 utils.color('purple', str(mfo['timepoint']), width=7, padside='right'),
                                  utils.color('yellow', str(mfo['locus'])),
                                  ('%-' + str(shorthand_width) + 's') % mfo.get('shorthand', mfo['sample'])), end=' ')
     if are_we_reading_existing_output(args):
@@ -706,7 +706,7 @@ def run_sample(sample, extra_logstr=None, seed_increment=0):
             cmd += ' ' + ' '.join(str(a) for a in mfo['extra-args'][eact])  # have to convert to str since the yaml reader auto-converts to e.g. int
 
     parameter_dir = heads.get_parameter_dir(args.study, sample, args.base_outdir, extra_str=args.version)
-    if args.action == 'cache-parameters':  # assume that parameters were cached once with the full sample, and we always want to use those (i.e. the general use case is --logstr is only set for non-parameter-caching options)
+    if args.action in ['cache-parameters', 'subset-partition']:  # assume that parameters were cached once with the full sample, and we always want to use those (i.e. the general use case is --logstr is only set for non-parameter-caching options)
         parameter_dir += heads.logstr_str(args, extra_logstr)
     else:
         cmd += ' --refuse-to-cache-parameters'
@@ -780,8 +780,8 @@ def run_sample(sample, extra_logstr=None, seed_increment=0):
         #         raise Exception('can\'t merge auto-generated input meta file (from info in seed yaml file) with another input meta file (you should really use the latter -- the input meta info from seed files was really just a hack to avoid doing ic50 calculations)')
         #     cmd += ' --input-metafname %s/input-meta.yaml' % parameter_dir  # write once when caching parameters, then after that you should be getting the affinities from the partis output files
 
-    elif pact(args.action) == 'partition':
-        logfname = '%s%s/%s%s/partition.log' % (baseoutdir, '' if args.paired_loci else '/partitions', sample, heads.logstr_str(args, extra_logstr))
+    elif pact(args.action) in ['partition', 'subset-partition']:
+        logfname = '%s%s/%s%s/%spartition.log' % (baseoutdir, '' if args.paired_loci else '/partitions', sample, heads.logstr_str(args, extra_logstr), 'subset-' if args.action=='subset-partition' else '')
 
         if args.small_clusters_to_ignore is not None:
             cmd += ' --small-clusters-to-ignore ' + args.small_clusters_to_ignore  # NOTE this is just a string, but in bin/partis it gets converted to/with a list/range
@@ -809,21 +809,21 @@ def run_sample(sample, extra_logstr=None, seed_increment=0):
     else:
         raise Exception('unexpected action: \'%s\'' % args.action)
 
-    outpath = get_outpath(parameter_dir, mfo, logfname)
-    if pact(args.action) in ['partition', 'simulate'] and not args.paired_loci:
+    outpath = get_outpath(parameter_dir, mfo, logfname)  # NOTE <outpath> is a fcn (of locus) if --paired-loci is set, otherwise a str
+    if pact(args.action) in ['partition', 'subset-partition', 'simulate'] and not args.paired_loci:
         cmd += ' --outfname %s' % outpath
 
     if args.logfnames:
         print(logfname)
         return
     if args.write_yaml:
-        args.yamlwriter.edit(args, outpath, sample, extra_logstr=extra_logstr)
+        args.yamlwriter.edit(args, outpath, sample, extra_logstr=extra_logstr)  # only for non-paired (otherwise it crashes)
         return
     efcn = utils.lpair_outputs_exist if args.paired_loci else utils.output_exists
     oexist = efcn(args, outpath, leave_zero_len=not args.rm_zero_length, todostr='proceeding to read' if are_we_reading_existing_output(args) else None)
     if are_we_reading_existing_output(args):
         if not oexist:
-            print('        output doesn\'t exist, can\'t run on it %s' % outpath)
+            print('        output doesn\'t exist, can\'t run on it%s' % ('' if args.paired_loci else ' '+outpath))
             return
     elif oexist:
         return

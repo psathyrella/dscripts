@@ -1,0 +1,4778 @@
+!!python/object/apply:collections.OrderedDict
+- - - 110040277-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/110040277/germline-sets
+        - --crash-on-duplicate-uids
+        partition: &id001
+        - --fast
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/110040277/seqs.fa
+      locus: igh
+      species: human
+      subject: '110040277'
+  - - 110040504-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/110040504/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/110040504/seqs.fa
+      locus: igh
+      species: human
+      subject: '110040504'
+  - - 110040887-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/110040887/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/110040887/seqs.fa
+      locus: igh
+      species: human
+      subject: '110040887'
+  - - 110040958-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/110040958/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/110040958/seqs.fa
+      locus: igh
+      species: human
+      subject: '110040958'
+  - - 110042606-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/110042606/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/110042606/seqs.fa
+      locus: igh
+      species: human
+      subject: '110042606'
+  - - 110042813-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/110042813/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/110042813/seqs.fa
+      locus: igh
+      species: human
+      subject: '110042813'
+  - - 110044155-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/110044155/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/110044155/seqs.fa
+      locus: igh
+      species: human
+      subject: '110044155'
+  - - 110044355-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/110044355/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/110044355/seqs.fa
+      locus: igh
+      species: human
+      subject: '110044355'
+  - - 110044376-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/110044376/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/110044376/seqs.fa
+      locus: igh
+      species: human
+      subject: '110044376'
+  - - 110044786-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/110044786/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/110044786/seqs.fa
+      locus: igh
+      species: human
+      subject: '110044786'
+  - - 110046119-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/110046119/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/110046119/seqs.fa
+      locus: igh
+      species: human
+      subject: '110046119'
+  - - 110046337-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/110046337/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/110046337/seqs.fa
+      locus: igh
+      species: human
+      subject: '110046337'
+  - - 110046912-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/110046912/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/110046912/seqs.fa
+      locus: igh
+      species: human
+      subject: '110046912'
+  - - 888179544-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888179544/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888179544/seqs.fa
+      locus: igh
+      species: human
+      subject: '888179544'
+  - - 888262983-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888262983/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888262983/seqs.fa
+      locus: igh
+      species: human
+      subject: '888262983'
+  - - 888286853-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888286853/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888286853/seqs.fa
+      locus: igh
+      species: human
+      subject: '888286853'
+  - - 888287118-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888287118/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888287118/seqs.fa
+      locus: igh
+      species: human
+      subject: '888287118'
+  - - 888407672-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888407672/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888407672/seqs.fa
+      locus: igh
+      species: human
+      subject: '888407672'
+  - - 888408987-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888408987/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888408987/seqs.fa
+      locus: igh
+      species: human
+      subject: '888408987'
+  - - 888436895-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888436895/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888436895/seqs.fa
+      locus: igh
+      species: human
+      subject: '888436895'
+  - - 888508776-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888508776/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888508776/seqs.fa
+      locus: igh
+      species: human
+      subject: '888508776'
+  - - 888559379-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888559379/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888559379/seqs.fa
+      locus: igh
+      species: human
+      subject: '888559379'
+  - - 888624327-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888624327/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888624327/seqs.fa
+      locus: igh
+      species: human
+      subject: '888624327'
+  - - 888634432-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888634432/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888634432/seqs.fa
+      locus: igh
+      species: human
+      subject: '888634432'
+  - - 888669369-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888669369/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888669369/seqs.fa
+      locus: igh
+      species: human
+      subject: '888669369'
+  - - 888760853-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888760853/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888760853/seqs.fa
+      locus: igh
+      species: human
+      subject: '888760853'
+  - - 888777004-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888777004/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888777004/seqs.fa
+      locus: igh
+      species: human
+      subject: '888777004'
+  - - 888816126-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888816126/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888816126/seqs.fa
+      locus: igh
+      species: human
+      subject: '888816126'
+  - - 888927334-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888927334/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888927334/seqs.fa
+      locus: igh
+      species: human
+      subject: '888927334'
+  - - 888945988-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888945988/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888945988/seqs.fa
+      locus: igh
+      species: human
+      subject: '888945988'
+  - - 888997753-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888997753/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/888997753/seqs.fa
+      locus: igh
+      species: human
+      subject: '888997753'
+  - - 889018176-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/889018176/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/889018176/seqs.fa
+      locus: igh
+      species: human
+      subject: '889018176'
+  - - CE0005604-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0005604/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0005604/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0005604
+  - - CE0005662-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0005662/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0005662/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0005662
+  - - CE0005779-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0005779/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0005779/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0005779
+  - - CE0005786-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0005786/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0005786/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0005786
+  - - CE0005797-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0005797/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0005797/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0005797
+  - - CE0005802-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0005802/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0005802/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0005802
+  - - CE0005924-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0005924/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0005924/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0005924
+  - - CE0006103-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0006103/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0006103/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0006103
+  - - CE0006371-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0006371/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0006371/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0006371
+  - - CE0006394-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0006394/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0006394/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0006394
+  - - CE0006435-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0006435/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0006435/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0006435
+  - - CE0006481-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0006481/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0006481/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0006481
+  - - CE0006623-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0006623/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0006623/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0006623
+  - - CE0006705-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0006705/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0006705/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0006705
+  - - CE0006781-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0006781/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0006781/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0006781
+  - - CE0007070-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0007070/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0007070/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0007070
+  - - CE0007129-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0007129/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0007129/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0007129
+  - - CE0007624-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0007624/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0007624/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0007624
+  - - CE0007769-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0007769/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0007769/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0007769
+  - - CE0007814-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0007814/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0007814/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0007814
+  - - CE0007821-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0007821/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0007821/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0007821
+  - - CE0007855-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0007855/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0007855/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0007855
+  - - CE0007865-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0007865/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0007865/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0007865
+  - - CE0007908-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0007908/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0007908/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0007908
+  - - CE0008114-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0008114/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0008114/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0008114
+  - - CE0008375-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0008375/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0008375/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0008375
+  - - CE0008411-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0008411/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0008411/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0008411
+  - - CE0008542-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0008542/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0008542/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0008542
+  - - CE0008593-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0008593/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0008593/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0008593
+  - - CE0008682-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0008682/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0008682/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0008682
+  - - CE0008817-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0008817/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0008817/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0008817
+  - - CE0008924-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0008924/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0008924/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0008924
+  - - CE0009275-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0009275/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0009275/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0009275
+  - - CE0009991-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0009991/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/CE0009991/seqs.fa
+      locus: igh
+      species: human
+      subject: CE0009991
+  - - RG1083-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1083/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1083/seqs.fa
+      locus: igh
+      species: human
+      subject: RG1083
+  - - RG1200-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1200/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1200/seqs.fa
+      locus: igh
+      species: human
+      subject: RG1200
+  - - RG1234-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1234/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1234/seqs.fa
+      locus: igh
+      species: human
+      subject: RG1234
+  - - RG1265-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1265/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1265/seqs.fa
+      locus: igh
+      species: human
+      subject: RG1265
+  - - RG1272-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1272/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1272/seqs.fa
+      locus: igh
+      species: human
+      subject: RG1272
+  - - RG1288-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1288/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1288/seqs.fa
+      locus: igh
+      species: human
+      subject: RG1288
+  - - RG1289-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1289/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1289/seqs.fa
+      locus: igh
+      species: human
+      subject: RG1289
+  - - RG1367-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1367/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1367/seqs.fa
+      locus: igh
+      species: human
+      subject: RG1367
+  - - RG1443-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1443/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1443/seqs.fa
+      locus: igh
+      species: human
+      subject: RG1443
+  - - RG1578-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1578/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1578/seqs.fa
+      locus: igh
+      species: human
+      subject: RG1578
+  - - RG1822-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1822/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1822/seqs.fa
+      locus: igh
+      species: human
+      subject: RG1822
+  - - RG1823-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1823/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1823/seqs.fa
+      locus: igh
+      species: human
+      subject: RG1823
+  - - RG1849-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1849/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1849/seqs.fa
+      locus: igh
+      species: human
+      subject: RG1849
+  - - RG1889-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1889/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1889/seqs.fa
+      locus: igh
+      species: human
+      subject: RG1889
+  - - RG1895-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1895/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG1895/seqs.fa
+      locus: igh
+      species: human
+      subject: RG1895
+  - - RG2037-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG2037/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG2037/seqs.fa
+      locus: igh
+      species: human
+      subject: RG2037
+  - - RG2105-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG2105/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG2105/seqs.fa
+      locus: igh
+      species: human
+      subject: RG2105
+  - - RG2115-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG2115/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG2115/seqs.fa
+      locus: igh
+      species: human
+      subject: RG2115
+  - - RG2155-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG2155/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG2155/seqs.fa
+      locus: igh
+      species: human
+      subject: RG2155
+  - - RG2195-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG2195/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG2195/seqs.fa
+      locus: igh
+      species: human
+      subject: RG2195
+  - - RG2226-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG2226/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG2226/seqs.fa
+      locus: igh
+      species: human
+      subject: RG2226
+  - - RG2251-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG2251/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG2251/seqs.fa
+      locus: igh
+      species: human
+      subject: RG2251
+  - - RG2379-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG2379/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG2379/seqs.fa
+      locus: igh
+      species: human
+      subject: RG2379
+  - - RG2459-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG2459/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG2459/seqs.fa
+      locus: igh
+      species: human
+      subject: RG2459
+  - - RG2512-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG2512/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG2512/seqs.fa
+      locus: igh
+      species: human
+      subject: RG2512
+  - - RG2617-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG2617/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG2617/seqs.fa
+      locus: igh
+      species: human
+      subject: RG2617
+  - - RG2674-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG2674/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG2674/seqs.fa
+      locus: igh
+      species: human
+      subject: RG2674
+  - - RG3105-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG3105/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG3105/seqs.fa
+      locus: igh
+      species: human
+      subject: RG3105
+  - - RG3309-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG3309/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG3309/seqs.fa
+      locus: igh
+      species: human
+      subject: RG3309
+  - - RG3355-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG3355/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG3355/seqs.fa
+      locus: igh
+      species: human
+      subject: RG3355
+  - - RG3444-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG3444/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG3444/seqs.fa
+      locus: igh
+      species: human
+      subject: RG3444
+  - - RG3549-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG3549/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG3549/seqs.fa
+      locus: igh
+      species: human
+      subject: RG3549
+  - - RG3578-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG3578/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG3578/seqs.fa
+      locus: igh
+      species: human
+      subject: RG3578
+  - - RG3666-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG3666/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG3666/seqs.fa
+      locus: igh
+      species: human
+      subject: RG3666
+  - - RG3783-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG3783/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG3783/seqs.fa
+      locus: igh
+      species: human
+      subject: RG3783
+  - - RG3844-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG3844/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG3844/seqs.fa
+      locus: igh
+      species: human
+      subject: RG3844
+  - - RG3945-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG3945/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG3945/seqs.fa
+      locus: igh
+      species: human
+      subject: RG3945
+  - - RG3948-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG3948/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG3948/seqs.fa
+      locus: igh
+      species: human
+      subject: RG3948
+  - - RG3987-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG3987/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG3987/seqs.fa
+      locus: igh
+      species: human
+      subject: RG3987
+  - - RG3995-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG3995/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG3995/seqs.fa
+      locus: igh
+      species: human
+      subject: RG3995
+  - - RG4094-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG4094/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG4094/seqs.fa
+      locus: igh
+      species: human
+      subject: RG4094
+  - - RG4543-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG4543/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/RG4543/seqs.fa
+      locus: igh
+      species: human
+      subject: RG4543
+  - - SCT2601343-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/SCT2601343/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/SCT2601343/seqs.fa
+      locus: igh
+      species: human
+      subject: SCT2601343
+  - - SCT2794524-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/SCT2794524/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/SCT2794524/seqs.fa
+      locus: igh
+      species: human
+      subject: SCT2794524
+  - - SCT4168329-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/SCT4168329/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/SCT4168329/seqs.fa
+      locus: igh
+      species: human
+      subject: SCT4168329
+  - - SCT6338383-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/SCT6338383/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/SCT6338383/seqs.fa
+      locus: igh
+      species: human
+      subject: SCT6338383
+  - - SCT8789722-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/SCT8789722/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/SCT8789722/seqs.fa
+      locus: igh
+      species: human
+      subject: SCT8789722
+  - - SCT8995047-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/SCT8995047/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/SCT8995047/seqs.fa
+      locus: igh
+      species: human
+      subject: SCT8995047
+  - - SCT9160998-igh
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/SCT9160998/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igh/SCT9160998/seqs.fa
+      locus: igh
+      species: human
+      subject: SCT9160998
+  - - 110040277-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110040277/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110040277/seqs.fa
+      locus: igk
+      species: human
+      subject: '110040277'
+  - - 110040811-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110040811/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110040811/seqs.fa
+      locus: igk
+      species: human
+      subject: '110040811'
+  - - 110040887-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110040887/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110040887/seqs.fa
+      locus: igk
+      species: human
+      subject: '110040887'
+  - - 110040958-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110040958/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110040958/seqs.fa
+      locus: igk
+      species: human
+      subject: '110040958'
+  - - 110040975-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110040975/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110040975/seqs.fa
+      locus: igk
+      species: human
+      subject: '110040975'
+  - - 110042606-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110042606/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110042606/seqs.fa
+      locus: igk
+      species: human
+      subject: '110042606'
+  - - 110042713-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110042713/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110042713/seqs.fa
+      locus: igk
+      species: human
+      subject: '110042713'
+  - - 110042813-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110042813/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110042813/seqs.fa
+      locus: igk
+      species: human
+      subject: '110042813'
+  - - 110044155-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110044155/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110044155/seqs.fa
+      locus: igk
+      species: human
+      subject: '110044155'
+  - - 110044355-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110044355/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110044355/seqs.fa
+      locus: igk
+      species: human
+      subject: '110044355'
+  - - 110044376-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110044376/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110044376/seqs.fa
+      locus: igk
+      species: human
+      subject: '110044376'
+  - - 110044782-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110044782/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110044782/seqs.fa
+      locus: igk
+      species: human
+      subject: '110044782'
+  - - 110044786-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110044786/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110044786/seqs.fa
+      locus: igk
+      species: human
+      subject: '110044786'
+  - - 110044845-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110044845/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110044845/seqs.fa
+      locus: igk
+      species: human
+      subject: '110044845'
+  - - 110046337-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110046337/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110046337/seqs.fa
+      locus: igk
+      species: human
+      subject: '110046337'
+  - - 110046617-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110046617/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110046617/seqs.fa
+      locus: igk
+      species: human
+      subject: '110046617'
+  - - 110046912-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110046912/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/110046912/seqs.fa
+      locus: igk
+      species: human
+      subject: '110046912'
+  - - 22301641N-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/22301641N/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/22301641N/seqs.fa
+      locus: igk
+      species: human
+      subject: 22301641N
+  - - 888262983-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888262983/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888262983/seqs.fa
+      locus: igk
+      species: human
+      subject: '888262983'
+  - - 888286853-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888286853/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888286853/seqs.fa
+      locus: igk
+      species: human
+      subject: '888286853'
+  - - 888287118-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888287118/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888287118/seqs.fa
+      locus: igk
+      species: human
+      subject: '888287118'
+  - - 888333863-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888333863/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888333863/seqs.fa
+      locus: igk
+      species: human
+      subject: '888333863'
+  - - 888402542-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888402542/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888402542/seqs.fa
+      locus: igk
+      species: human
+      subject: '888402542'
+  - - 888407672-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888407672/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888407672/seqs.fa
+      locus: igk
+      species: human
+      subject: '888407672'
+  - - 888408987-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888408987/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888408987/seqs.fa
+      locus: igk
+      species: human
+      subject: '888408987'
+  - - 888436895-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888436895/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888436895/seqs.fa
+      locus: igk
+      species: human
+      subject: '888436895'
+  - - 888508776-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888508776/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888508776/seqs.fa
+      locus: igk
+      species: human
+      subject: '888508776'
+  - - 888559379-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888559379/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888559379/seqs.fa
+      locus: igk
+      species: human
+      subject: '888559379'
+  - - 888581247-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888581247/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888581247/seqs.fa
+      locus: igk
+      species: human
+      subject: '888581247'
+  - - 888624327-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888624327/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888624327/seqs.fa
+      locus: igk
+      species: human
+      subject: '888624327'
+  - - 888634432-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888634432/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888634432/seqs.fa
+      locus: igk
+      species: human
+      subject: '888634432'
+  - - 888669369-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888669369/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888669369/seqs.fa
+      locus: igk
+      species: human
+      subject: '888669369'
+  - - 888760853-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888760853/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888760853/seqs.fa
+      locus: igk
+      species: human
+      subject: '888760853'
+  - - 888777004-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888777004/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888777004/seqs.fa
+      locus: igk
+      species: human
+      subject: '888777004'
+  - - 888816126-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888816126/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888816126/seqs.fa
+      locus: igk
+      species: human
+      subject: '888816126'
+  - - 888921048-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888921048/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888921048/seqs.fa
+      locus: igk
+      species: human
+      subject: '888921048'
+  - - 888927334-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888927334/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888927334/seqs.fa
+      locus: igk
+      species: human
+      subject: '888927334'
+  - - 888945988-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888945988/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888945988/seqs.fa
+      locus: igk
+      species: human
+      subject: '888945988'
+  - - 888956204-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888956204/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888956204/seqs.fa
+      locus: igk
+      species: human
+      subject: '888956204'
+  - - 888976935-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888976935/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888976935/seqs.fa
+      locus: igk
+      species: human
+      subject: '888976935'
+  - - 888997753-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888997753/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/888997753/seqs.fa
+      locus: igk
+      species: human
+      subject: '888997753'
+  - - 889018176-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/889018176/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/889018176/seqs.fa
+      locus: igk
+      species: human
+      subject: '889018176'
+  - - CE0005604-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0005604/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0005604/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0005604
+  - - CE0005662-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0005662/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0005662/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0005662
+  - - CE0005779-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0005779/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0005779/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0005779
+  - - CE0005786-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0005786/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0005786/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0005786
+  - - CE0005802-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0005802/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0005802/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0005802
+  - - CE0005988-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0005988/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0005988/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0005988
+  - - CE0006103-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0006103/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0006103/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0006103
+  - - CE0006233-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0006233/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0006233/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0006233
+  - - CE0006371-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0006371/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0006371/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0006371
+  - - CE0006394-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0006394/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0006394/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0006394
+  - - CE0006435-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0006435/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0006435/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0006435
+  - - CE0006481-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0006481/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0006481/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0006481
+  - - CE0006524-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0006524/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0006524/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0006524
+  - - CE0006547-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0006547/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0006547/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0006547
+  - - CE0006623-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0006623/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0006623/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0006623
+  - - CE0006781-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0006781/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0006781/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0006781
+  - - CE0007070-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0007070/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0007070/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0007070
+  - - CE0007129-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0007129/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0007129/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0007129
+  - - CE0007408-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0007408/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0007408/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0007408
+  - - CE0007424-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0007424/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0007424/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0007424
+  - - CE0007624-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0007624/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0007624/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0007624
+  - - CE0007765-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0007765/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0007765/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0007765
+  - - CE0007769-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0007769/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0007769/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0007769
+  - - CE0007814-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0007814/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0007814/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0007814
+  - - CE0007821-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0007821/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0007821/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0007821
+  - - CE0007855-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0007855/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0007855/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0007855
+  - - CE0007865-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0007865/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0007865/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0007865
+  - - CE0007908-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0007908/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0007908/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0007908
+  - - CE0007925-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0007925/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0007925/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0007925
+  - - CE0008114-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0008114/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0008114/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0008114
+  - - CE0008202-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0008202/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0008202/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0008202
+  - - CE0008375-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0008375/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0008375/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0008375
+  - - CE0008411-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0008411/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0008411/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0008411
+  - - CE0008484-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0008484/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0008484/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0008484
+  - - CE0008542-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0008542/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0008542/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0008542
+  - - CE0008593-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0008593/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0008593/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0008593
+  - - CE0008682-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0008682/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0008682/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0008682
+  - - CE0008817-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0008817/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0008817/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0008817
+  - - CE0008924-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0008924/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0008924/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0008924
+  - - CE0009275-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0009275/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0009275/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0009275
+  - - CE0009991-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0009991/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/CE0009991/seqs.fa
+      locus: igk
+      species: human
+      subject: CE0009991
+  - - RG1083-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1083/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1083/seqs.fa
+      locus: igk
+      species: human
+      subject: RG1083
+  - - RG1200-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1200/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1200/seqs.fa
+      locus: igk
+      species: human
+      subject: RG1200
+  - - RG1234-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1234/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1234/seqs.fa
+      locus: igk
+      species: human
+      subject: RG1234
+  - - RG1265-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1265/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1265/seqs.fa
+      locus: igk
+      species: human
+      subject: RG1265
+  - - RG1272-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1272/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1272/seqs.fa
+      locus: igk
+      species: human
+      subject: RG1272
+  - - RG1289-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1289/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1289/seqs.fa
+      locus: igk
+      species: human
+      subject: RG1289
+  - - RG1367-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1367/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1367/seqs.fa
+      locus: igk
+      species: human
+      subject: RG1367
+  - - RG1443-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1443/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1443/seqs.fa
+      locus: igk
+      species: human
+      subject: RG1443
+  - - RG1565-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1565/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1565/seqs.fa
+      locus: igk
+      species: human
+      subject: RG1565
+  - - RG1578-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1578/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1578/seqs.fa
+      locus: igk
+      species: human
+      subject: RG1578
+  - - RG1791-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1791/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1791/seqs.fa
+      locus: igk
+      species: human
+      subject: RG1791
+  - - RG1802-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1802/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1802/seqs.fa
+      locus: igk
+      species: human
+      subject: RG1802
+  - - RG1822-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1822/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1822/seqs.fa
+      locus: igk
+      species: human
+      subject: RG1822
+  - - RG1849-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1849/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1849/seqs.fa
+      locus: igk
+      species: human
+      subject: RG1849
+  - - RG1889-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1889/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1889/seqs.fa
+      locus: igk
+      species: human
+      subject: RG1889
+  - - RG1895-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1895/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1895/seqs.fa
+      locus: igk
+      species: human
+      subject: RG1895
+  - - RG1936-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1936/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG1936/seqs.fa
+      locus: igk
+      species: human
+      subject: RG1936
+  - - RG2037-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2037/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2037/seqs.fa
+      locus: igk
+      species: human
+      subject: RG2037
+  - - RG2105-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2105/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2105/seqs.fa
+      locus: igk
+      species: human
+      subject: RG2105
+  - - RG2115-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2115/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2115/seqs.fa
+      locus: igk
+      species: human
+      subject: RG2115
+  - - RG2118-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2118/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2118/seqs.fa
+      locus: igk
+      species: human
+      subject: RG2118
+  - - RG2155-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2155/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2155/seqs.fa
+      locus: igk
+      species: human
+      subject: RG2155
+  - - RG2195-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2195/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2195/seqs.fa
+      locus: igk
+      species: human
+      subject: RG2195
+  - - RG2207-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2207/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2207/seqs.fa
+      locus: igk
+      species: human
+      subject: RG2207
+  - - RG2251-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2251/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2251/seqs.fa
+      locus: igk
+      species: human
+      subject: RG2251
+  - - RG2284-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2284/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2284/seqs.fa
+      locus: igk
+      species: human
+      subject: RG2284
+  - - RG2350-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2350/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2350/seqs.fa
+      locus: igk
+      species: human
+      subject: RG2350
+  - - RG2459-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2459/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2459/seqs.fa
+      locus: igk
+      species: human
+      subject: RG2459
+  - - RG2512-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2512/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2512/seqs.fa
+      locus: igk
+      species: human
+      subject: RG2512
+  - - RG2617-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2617/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2617/seqs.fa
+      locus: igk
+      species: human
+      subject: RG2617
+  - - RG2674-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2674/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2674/seqs.fa
+      locus: igk
+      species: human
+      subject: RG2674
+  - - RG2685-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2685/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2685/seqs.fa
+      locus: igk
+      species: human
+      subject: RG2685
+  - - RG2903-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2903/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG2903/seqs.fa
+      locus: igk
+      species: human
+      subject: RG2903
+  - - RG3105-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3105/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3105/seqs.fa
+      locus: igk
+      species: human
+      subject: RG3105
+  - - RG3309-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3309/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3309/seqs.fa
+      locus: igk
+      species: human
+      subject: RG3309
+  - - RG3355-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3355/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3355/seqs.fa
+      locus: igk
+      species: human
+      subject: RG3355
+  - - RG3444-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3444/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3444/seqs.fa
+      locus: igk
+      species: human
+      subject: RG3444
+  - - RG3549-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3549/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3549/seqs.fa
+      locus: igk
+      species: human
+      subject: RG3549
+  - - RG3556-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3556/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3556/seqs.fa
+      locus: igk
+      species: human
+      subject: RG3556
+  - - RG3578-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3578/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3578/seqs.fa
+      locus: igk
+      species: human
+      subject: RG3578
+  - - RG3666-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3666/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3666/seqs.fa
+      locus: igk
+      species: human
+      subject: RG3666
+  - - RG3758-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3758/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3758/seqs.fa
+      locus: igk
+      species: human
+      subject: RG3758
+  - - RG3783-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3783/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3783/seqs.fa
+      locus: igk
+      species: human
+      subject: RG3783
+  - - RG3844-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3844/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3844/seqs.fa
+      locus: igk
+      species: human
+      subject: RG3844
+  - - RG3945-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3945/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3945/seqs.fa
+      locus: igk
+      species: human
+      subject: RG3945
+  - - RG3948-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3948/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3948/seqs.fa
+      locus: igk
+      species: human
+      subject: RG3948
+  - - RG3987-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3987/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3987/seqs.fa
+      locus: igk
+      species: human
+      subject: RG3987
+  - - RG3995-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3995/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG3995/seqs.fa
+      locus: igk
+      species: human
+      subject: RG3995
+  - - RG4094-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG4094/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG4094/seqs.fa
+      locus: igk
+      species: human
+      subject: RG4094
+  - - RG4543-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG4543/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/RG4543/seqs.fa
+      locus: igk
+      species: human
+      subject: RG4543
+  - - SCT2601343-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/SCT2601343/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/SCT2601343/seqs.fa
+      locus: igk
+      species: human
+      subject: SCT2601343
+  - - SCT2794524-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/SCT2794524/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/SCT2794524/seqs.fa
+      locus: igk
+      species: human
+      subject: SCT2794524
+  - - SCT4168329-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/SCT4168329/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/SCT4168329/seqs.fa
+      locus: igk
+      species: human
+      subject: SCT4168329
+  - - SCT6222960-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/SCT6222960/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/SCT6222960/seqs.fa
+      locus: igk
+      species: human
+      subject: SCT6222960
+  - - SCT6338383-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/SCT6338383/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/SCT6338383/seqs.fa
+      locus: igk
+      species: human
+      subject: SCT6338383
+  - - SCT8789722-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/SCT8789722/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/SCT8789722/seqs.fa
+      locus: igk
+      species: human
+      subject: SCT8789722
+  - - SCT9160998-igk
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/SCT9160998/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igk/SCT9160998/seqs.fa
+      locus: igk
+      species: human
+      subject: SCT9160998
+  - - 110040277-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110040277/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110040277/seqs.fa
+      locus: igl
+      species: human
+      subject: '110040277'
+  - - 110040811-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110040811/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110040811/seqs.fa
+      locus: igl
+      species: human
+      subject: '110040811'
+  - - 110040851-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110040851/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110040851/seqs.fa
+      locus: igl
+      species: human
+      subject: '110040851'
+  - - 110040887-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110040887/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110040887/seqs.fa
+      locus: igl
+      species: human
+      subject: '110040887'
+  - - 110040958-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110040958/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110040958/seqs.fa
+      locus: igl
+      species: human
+      subject: '110040958'
+  - - 110040975-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110040975/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110040975/seqs.fa
+      locus: igl
+      species: human
+      subject: '110040975'
+  - - 110042606-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110042606/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110042606/seqs.fa
+      locus: igl
+      species: human
+      subject: '110042606'
+  - - 110042713-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110042713/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110042713/seqs.fa
+      locus: igl
+      species: human
+      subject: '110042713'
+  - - 110042813-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110042813/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110042813/seqs.fa
+      locus: igl
+      species: human
+      subject: '110042813'
+  - - 110042935-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110042935/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110042935/seqs.fa
+      locus: igl
+      species: human
+      subject: '110042935'
+  - - 110044155-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110044155/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110044155/seqs.fa
+      locus: igl
+      species: human
+      subject: '110044155'
+  - - 110044355-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110044355/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110044355/seqs.fa
+      locus: igl
+      species: human
+      subject: '110044355'
+  - - 110044376-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110044376/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110044376/seqs.fa
+      locus: igl
+      species: human
+      subject: '110044376'
+  - - 110044782-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110044782/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110044782/seqs.fa
+      locus: igl
+      species: human
+      subject: '110044782'
+  - - 110044786-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110044786/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110044786/seqs.fa
+      locus: igl
+      species: human
+      subject: '110044786'
+  - - 110046337-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110046337/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110046337/seqs.fa
+      locus: igl
+      species: human
+      subject: '110046337'
+  - - 110046617-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110046617/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110046617/seqs.fa
+      locus: igl
+      species: human
+      subject: '110046617'
+  - - 110046912-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110046912/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/110046912/seqs.fa
+      locus: igl
+      species: human
+      subject: '110046912'
+  - - 22301641N-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/22301641N/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/22301641N/seqs.fa
+      locus: igl
+      species: human
+      subject: 22301641N
+  - - 888214522-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888214522/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888214522/seqs.fa
+      locus: igl
+      species: human
+      subject: '888214522'
+  - - 888262983-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888262983/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888262983/seqs.fa
+      locus: igl
+      species: human
+      subject: '888262983'
+  - - 888286853-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888286853/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888286853/seqs.fa
+      locus: igl
+      species: human
+      subject: '888286853'
+  - - 888287118-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888287118/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888287118/seqs.fa
+      locus: igl
+      species: human
+      subject: '888287118'
+  - - 888333863-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888333863/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888333863/seqs.fa
+      locus: igl
+      species: human
+      subject: '888333863'
+  - - 888407672-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888407672/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888407672/seqs.fa
+      locus: igl
+      species: human
+      subject: '888407672'
+  - - 888408987-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888408987/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888408987/seqs.fa
+      locus: igl
+      species: human
+      subject: '888408987'
+  - - 888436895-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888436895/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888436895/seqs.fa
+      locus: igl
+      species: human
+      subject: '888436895'
+  - - 888508776-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888508776/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888508776/seqs.fa
+      locus: igl
+      species: human
+      subject: '888508776'
+  - - 888559379-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888559379/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888559379/seqs.fa
+      locus: igl
+      species: human
+      subject: '888559379'
+  - - 888581247-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888581247/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888581247/seqs.fa
+      locus: igl
+      species: human
+      subject: '888581247'
+  - - 888624327-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888624327/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888624327/seqs.fa
+      locus: igl
+      species: human
+      subject: '888624327'
+  - - 888634432-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888634432/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888634432/seqs.fa
+      locus: igl
+      species: human
+      subject: '888634432'
+  - - 888640612-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888640612/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888640612/seqs.fa
+      locus: igl
+      species: human
+      subject: '888640612'
+  - - 888669369-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888669369/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888669369/seqs.fa
+      locus: igl
+      species: human
+      subject: '888669369'
+  - - 888760853-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888760853/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888760853/seqs.fa
+      locus: igl
+      species: human
+      subject: '888760853'
+  - - 888777004-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888777004/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888777004/seqs.fa
+      locus: igl
+      species: human
+      subject: '888777004'
+  - - 888816126-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888816126/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888816126/seqs.fa
+      locus: igl
+      species: human
+      subject: '888816126'
+  - - 888921048-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888921048/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888921048/seqs.fa
+      locus: igl
+      species: human
+      subject: '888921048'
+  - - 888927334-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888927334/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888927334/seqs.fa
+      locus: igl
+      species: human
+      subject: '888927334'
+  - - 888945988-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888945988/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888945988/seqs.fa
+      locus: igl
+      species: human
+      subject: '888945988'
+  - - 888956204-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888956204/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888956204/seqs.fa
+      locus: igl
+      species: human
+      subject: '888956204'
+  - - 888976935-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888976935/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888976935/seqs.fa
+      locus: igl
+      species: human
+      subject: '888976935'
+  - - 888997753-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888997753/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/888997753/seqs.fa
+      locus: igl
+      species: human
+      subject: '888997753'
+  - - 889005836-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/889005836/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/889005836/seqs.fa
+      locus: igl
+      species: human
+      subject: '889005836'
+  - - 889018176-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/889018176/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/889018176/seqs.fa
+      locus: igl
+      species: human
+      subject: '889018176'
+  - - CE0005604-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0005604/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0005604/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0005604
+  - - CE0005662-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0005662/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0005662/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0005662
+  - - CE0005786-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0005786/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0005786/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0005786
+  - - CE0005802-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0005802/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0005802/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0005802
+  - - CE0005988-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0005988/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0005988/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0005988
+  - - CE0006103-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0006103/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0006103/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0006103
+  - - CE0006233-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0006233/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0006233/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0006233
+  - - CE0006371-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0006371/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0006371/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0006371
+  - - CE0006394-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0006394/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0006394/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0006394
+  - - CE0006435-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0006435/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0006435/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0006435
+  - - CE0006481-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0006481/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0006481/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0006481
+  - - CE0006524-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0006524/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0006524/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0006524
+  - - CE0006547-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0006547/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0006547/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0006547
+  - - CE0006623-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0006623/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0006623/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0006623
+  - - CE0006705-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0006705/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0006705/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0006705
+  - - CE0006781-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0006781/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0006781/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0006781
+  - - CE0006829-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0006829/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0006829/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0006829
+  - - CE0006943-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0006943/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0006943/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0006943
+  - - CE0007070-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0007070/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0007070/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0007070
+  - - CE0007129-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0007129/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0007129/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0007129
+  - - CE0007408-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0007408/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0007408/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0007408
+  - - CE0007424-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0007424/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0007424/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0007424
+  - - CE0007765-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0007765/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0007765/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0007765
+  - - CE0007769-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0007769/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0007769/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0007769
+  - - CE0007814-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0007814/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0007814/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0007814
+  - - CE0007821-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0007821/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0007821/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0007821
+  - - CE0007855-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0007855/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0007855/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0007855
+  - - CE0007865-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0007865/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0007865/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0007865
+  - - CE0007908-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0007908/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0007908/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0007908
+  - - CE0007925-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0007925/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0007925/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0007925
+  - - CE0008114-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0008114/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0008114/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0008114
+  - - CE0008202-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0008202/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0008202/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0008202
+  - - CE0008375-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0008375/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0008375/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0008375
+  - - CE0008411-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0008411/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0008411/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0008411
+  - - CE0008484-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0008484/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0008484/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0008484
+  - - CE0008542-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0008542/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0008542/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0008542
+  - - CE0008593-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0008593/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0008593/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0008593
+  - - CE0008661-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0008661/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0008661/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0008661
+  - - CE0008682-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0008682/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0008682/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0008682
+  - - CE0008817-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0008817/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0008817/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0008817
+  - - CE0008924-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0008924/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0008924/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0008924
+  - - CE0009275-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0009275/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0009275/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0009275
+  - - CE0009991-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0009991/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/CE0009991/seqs.fa
+      locus: igl
+      species: human
+      subject: CE0009991
+  - - RG1083-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1083/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1083/seqs.fa
+      locus: igl
+      species: human
+      subject: RG1083
+  - - RG1193-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1193/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1193/seqs.fa
+      locus: igl
+      species: human
+      subject: RG1193
+  - - RG1200-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1200/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1200/seqs.fa
+      locus: igl
+      species: human
+      subject: RG1200
+  - - RG1234-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1234/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1234/seqs.fa
+      locus: igl
+      species: human
+      subject: RG1234
+  - - RG1265-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1265/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1265/seqs.fa
+      locus: igl
+      species: human
+      subject: RG1265
+  - - RG1272-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1272/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1272/seqs.fa
+      locus: igl
+      species: human
+      subject: RG1272
+  - - RG1289-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1289/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1289/seqs.fa
+      locus: igl
+      species: human
+      subject: RG1289
+  - - RG1367-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1367/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1367/seqs.fa
+      locus: igl
+      species: human
+      subject: RG1367
+  - - RG1443-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1443/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1443/seqs.fa
+      locus: igl
+      species: human
+      subject: RG1443
+  - - RG1578-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1578/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1578/seqs.fa
+      locus: igl
+      species: human
+      subject: RG1578
+  - - RG1791-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1791/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1791/seqs.fa
+      locus: igl
+      species: human
+      subject: RG1791
+  - - RG1802-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1802/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1802/seqs.fa
+      locus: igl
+      species: human
+      subject: RG1802
+  - - RG1822-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1822/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1822/seqs.fa
+      locus: igl
+      species: human
+      subject: RG1822
+  - - RG1849-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1849/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1849/seqs.fa
+      locus: igl
+      species: human
+      subject: RG1849
+  - - RG1889-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1889/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1889/seqs.fa
+      locus: igl
+      species: human
+      subject: RG1889
+  - - RG1895-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1895/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1895/seqs.fa
+      locus: igl
+      species: human
+      subject: RG1895
+  - - RG1936-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1936/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG1936/seqs.fa
+      locus: igl
+      species: human
+      subject: RG1936
+  - - RG2037-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2037/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2037/seqs.fa
+      locus: igl
+      species: human
+      subject: RG2037
+  - - RG2105-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2105/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2105/seqs.fa
+      locus: igl
+      species: human
+      subject: RG2105
+  - - RG2115-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2115/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2115/seqs.fa
+      locus: igl
+      species: human
+      subject: RG2115
+  - - RG2155-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2155/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2155/seqs.fa
+      locus: igl
+      species: human
+      subject: RG2155
+  - - RG2195-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2195/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2195/seqs.fa
+      locus: igl
+      species: human
+      subject: RG2195
+  - - RG2207-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2207/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2207/seqs.fa
+      locus: igl
+      species: human
+      subject: RG2207
+  - - RG2251-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2251/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2251/seqs.fa
+      locus: igl
+      species: human
+      subject: RG2251
+  - - RG2284-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2284/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2284/seqs.fa
+      locus: igl
+      species: human
+      subject: RG2284
+  - - RG2350-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2350/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2350/seqs.fa
+      locus: igl
+      species: human
+      subject: RG2350
+  - - RG2459-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2459/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2459/seqs.fa
+      locus: igl
+      species: human
+      subject: RG2459
+  - - RG2512-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2512/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2512/seqs.fa
+      locus: igl
+      species: human
+      subject: RG2512
+  - - RG2617-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2617/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2617/seqs.fa
+      locus: igl
+      species: human
+      subject: RG2617
+  - - RG2674-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2674/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2674/seqs.fa
+      locus: igl
+      species: human
+      subject: RG2674
+  - - RG2685-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2685/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG2685/seqs.fa
+      locus: igl
+      species: human
+      subject: RG2685
+  - - RG3105-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3105/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3105/seqs.fa
+      locus: igl
+      species: human
+      subject: RG3105
+  - - RG3309-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3309/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3309/seqs.fa
+      locus: igl
+      species: human
+      subject: RG3309
+  - - RG3355-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3355/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3355/seqs.fa
+      locus: igl
+      species: human
+      subject: RG3355
+  - - RG3444-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3444/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3444/seqs.fa
+      locus: igl
+      species: human
+      subject: RG3444
+  - - RG3549-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3549/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3549/seqs.fa
+      locus: igl
+      species: human
+      subject: RG3549
+  - - RG3556-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3556/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3556/seqs.fa
+      locus: igl
+      species: human
+      subject: RG3556
+  - - RG3578-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3578/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3578/seqs.fa
+      locus: igl
+      species: human
+      subject: RG3578
+  - - RG3758-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3758/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3758/seqs.fa
+      locus: igl
+      species: human
+      subject: RG3758
+  - - RG3783-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3783/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3783/seqs.fa
+      locus: igl
+      species: human
+      subject: RG3783
+  - - RG3844-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3844/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3844/seqs.fa
+      locus: igl
+      species: human
+      subject: RG3844
+  - - RG3945-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3945/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3945/seqs.fa
+      locus: igl
+      species: human
+      subject: RG3945
+  - - RG3948-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3948/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3948/seqs.fa
+      locus: igl
+      species: human
+      subject: RG3948
+  - - RG3987-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3987/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3987/seqs.fa
+      locus: igl
+      species: human
+      subject: RG3987
+  - - RG3995-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3995/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG3995/seqs.fa
+      locus: igl
+      species: human
+      subject: RG3995
+  - - RG4094-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG4094/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG4094/seqs.fa
+      locus: igl
+      species: human
+      subject: RG4094
+  - - RG4543-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG4543/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/RG4543/seqs.fa
+      locus: igl
+      species: human
+      subject: RG4543
+  - - SCT2601343-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/SCT2601343/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/SCT2601343/seqs.fa
+      locus: igl
+      species: human
+      subject: SCT2601343
+  - - SCT2794524-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/SCT2794524/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/SCT2794524/seqs.fa
+      locus: igl
+      species: human
+      subject: SCT2794524
+  - - SCT4168329-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/SCT4168329/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/SCT4168329/seqs.fa
+      locus: igl
+      species: human
+      subject: SCT4168329
+  - - SCT6222960-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/SCT6222960/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/SCT6222960/seqs.fa
+      locus: igl
+      species: human
+      subject: SCT6222960
+  - - SCT6338383-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/SCT6338383/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/SCT6338383/seqs.fa
+      locus: igl
+      species: human
+      subject: SCT6338383
+  - - SCT8789722-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/SCT8789722/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/SCT8789722/seqs.fa
+      locus: igl
+      species: human
+      subject: SCT8789722
+  - - SCT8995047-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/SCT8995047/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/SCT8995047/seqs.fa
+      locus: igl
+      species: human
+      subject: SCT8995047
+  - - SCT9160998-igl
+    - extra-args:
+        cache-parameters:
+        - --leave-default-germline
+        - --initial-germline-dir
+        - /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/SCT9160998/germline-sets
+        - --crash-on-duplicate-uids
+        partition: *id001
+      infname: /fh/fast/matsen_e/data/vanwinkle-170/processed/v3/igl/SCT9160998/seqs.fa
+      locus: igl
+      species: human
+      subject: SCT9160998
